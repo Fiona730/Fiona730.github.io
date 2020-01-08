@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kehan's Homepage"
+title                    : "Kehan Xu / Personal Homepage"
 title_separator          : "-"
 name                     : &name "Kehan Xu"
 description              : &description "personal description"
@@ -88,7 +88,7 @@ author:
   pubmed           : 
   googlescholar    : 
   github           : "Fiona730"
-  email            :
+  email            : "1600012731@pku.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
