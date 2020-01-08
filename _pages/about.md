@@ -10,7 +10,7 @@ redirect_from:
 
 About Me
 ------
-I am a senior student at Peking Univeristy. My major is Computer Science. My research interest concentrates on deep learning and computer vision. I joined Machine Intelligence Lab at Peking University in my third year and conducted research under the supervision of [Prof. Yadong Mu](https://pkumyd.github.io). I interned at [Megvii](https://www.megvii.com/en) from February to June 2019. During the summer of 2019, I visited [Vision and Learning Lab](http://vllab.ucmerced.edu) led by [Prof. Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/) at University of California, Merced. I served as a Machine Learning Software Engineering Intern at Google from September to December 2019. I enjoy drawing in my leisure time.
+I am a senior student at Peking Univeristy. My major is Computer Science. My research interest concentrates on deep learning and computer vision. I joined Machine Intelligence Lab at Peking University in my third year and conducted research under the supervision of [Prof. Yadong Mu](https://pkumyd.github.io). I interned at [Megvii](https://www.megvii.com/en) from February to June 2019. During the summer of 2019, I visited [Vision and Learning Lab](http://vllab.ucmerced.edu) led by [Prof. Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/) at University of California, Merced. I served as a Machine Learning Software Engineering Intern at Google from September to December 2019. I enjoy drawing and watching musicals in my leisure time.
 
 Publications
 ------
