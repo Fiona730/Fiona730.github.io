@@ -81,14 +81,14 @@ analytics:
 # Site Author
 author:
   name             : "Kehan Xu"
-  avatar           : "IMG_1934_1.jpg"
-  bio              : "Undergraduate student at Peking University, majoring in computer science."
+  avatar           : "IMG_0514.jpg"
+  bio              : "Earned my bachelor's degree from Peking University, majoring in computer science."
   location         : "Beijing, China"
   employer         :
   pubmed           : 
   googlescholar    : 
   github           : "Fiona730"
-  email            : "1600012731@pku.edu.cn"
+  email            : "fiona0730pku@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "fiona-xu-356139159"
+  linkedin         : "kehan-xu-356139159"
   orcid            : 
   pinterest        :
   soundcloud       :

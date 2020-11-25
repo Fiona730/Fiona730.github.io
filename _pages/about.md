@@ -10,20 +10,19 @@ redirect_from:
 
 About Me
 ------
-I am a senior student at Peking Univeristy. My major is Computer Science. My research interest concentrates on deep learning and computer vision. I joined Machine Intelligence Lab at Peking University in my third year and conducted research under the supervision of [Prof. Yadong Mu](https://pkumyd.github.io). I interned at [Megvii](https://www.megvii.com/en) from February to June 2019. During the summer of 2019, I visited [Vision and Learning Lab](http://vllab.ucmerced.edu) led by [Prof. Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/) at University of California, Merced. I served as a Machine Learning Software Engineering Intern at Google from September to December 2019. I enjoy drawing and watching musicals in my leisure time.
+I graduated from Peking University in 2020. I plan to enroll in CMU MSCV in 2021 Fall. My research interest includes deep learning, computer vision and computer graphics.
 
 Publications
 ------
-### Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection
+### [Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection] (https://ojs.aaai.org//index.php/AAAI/article/view/6913)
 
-- [Ruihai Wu](https://warshallrho.github.io/), **Kehan Xu**, Chenchen Liu, Nan Zhuang, Yadong Mu.
+- [Ruihai Wu](https://warshallrho.github.io/), **Kehan Xu**, Chenchen Liu, Nan Zhuang, [Yadong Mu](http://www.muyadong.com).
 - AAAI 2020, oral presentation.
 
-Honors and Awards
+Experience
 ------
-- Outstanding Research Intern at Megvii, *2019*
-- Spotlight Winner in Google Girl Hackathon Season 5, *2019*
-- Best Team in Google Girl Hackathon Season 4, *2018*
-- First Prize in Mathematical Contest in Modeling, *2018*
-- Bronze medal in Chinese Mathematical Olympiad, *2015*
-- Top 12 in Chinese Girls’ Mathematical Olympiad, *2015*
+- Software Engineering Intern at Tencent Interactive Entertainment Group
+- Software Engineering Intern at Google TensorFlow Team
+- Research Intern at [Megvii](https://www.megvii.com/en)
+- Summer Intern at [Vision and Learning Lab](http://vllab.ucmerced.edu) at University of California, Merced led by Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
+- Research Assistant at Peking University advised by Prof. [Yadong Mu](http://www.muyadong.com).
