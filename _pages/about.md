@@ -24,5 +24,5 @@ Experience
 - Software Engineering Intern at Tencent Interactive Entertainment Group
 - Software Engineering Intern at Google TensorFlow Team
 - Research Intern at [Megvii](https://www.megvii.com/en)
-- Summer Intern at [Vision and Learning Lab](http://vllab.ucmerced.edu) at University of California, Merced led by Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
-- Research Assistant at Peking University advised by Prof. [Yadong Mu](http://www.muyadong.com).
+- Summer Intern at University of California, Merced supervised by Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
+- Research Assistant at Peking University advised by Prof. [Yadong Mu](http://www.muyadong.com)
