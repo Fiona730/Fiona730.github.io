@@ -14,7 +14,7 @@ I graduated from Peking University in 2020. I plan to enroll in CMU MSCV in 2021
 
 Publications
 ------
-### Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection
+### [Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection](https://ojs.aaai.org//index.php/AAAI/article/view/6913)
 
 - [Ruihai Wu](https://warshallrho.github.io/), **Kehan Xu**, Chenchen Liu, Nan Zhuang, [Yadong Mu](http://www.muyadong.com)
 - AAAI 2020, oral presentation
