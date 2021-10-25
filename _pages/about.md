@@ -10,7 +10,7 @@ redirect_from:
 
 About Me
 ------
-I graduated from Peking University in 2020. I plan to enroll in CMU MSCV in 2021 Fall. My research interest includes deep learning, computer vision and computer graphics.
+I am currently a first year Computer Science Master student at ETH Zurich with visual computing major. I earned my bachelor's degree from Peking University in 2020 and worked as a full time graphics engineer and techinical artist at ByteDance temporarily after graduation. I worked on computer vision in my bachelor's, and now my research interest focuses on computer graphics.
 
 Publications
 ------
@@ -21,7 +21,8 @@ Publications
 
 Experience
 ------
-- Software Engineering Intern at Tencent Interactive Entertainment Group
+- Fulltime Graphics Engineer and Techinical Artist at ByteDance Oasis Studio
+- Software Engineering Intern at Tencent Morefun Studio Group
 - Software Engineering Intern at Google TensorFlow Team
 - Research Intern at [Megvii](https://www.megvii.com/en)
 - Summer Intern at University of California, Merced supervised by Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
