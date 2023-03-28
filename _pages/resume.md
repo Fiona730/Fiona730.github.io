@@ -30,12 +30,12 @@ Work Experience
     - Houdini Open World Editing Tools
 - **2020.5 ~ 2020.8: Game Development Engineering Intern, [Morefun Game Studio](https://www.youtube.com/@MOREFUN_STUDIOS/about), [Tencent](https://www.tencent.com/en-us/)**
     - MLP-based Real-time Human Motion Generation Neural Network
-- **2019.9 ~ 2019.12: Machine Learning Software Engineering Intern at TensorFlow Team, Google China**
+- **2019.9 ~ 2019.12: Machine Learning Software Engineering Intern, TensorFlow Team, Google China**
     - GAN-based Photorealistic Image Generation from Semantic Masks with TensorFlow 2.0
 
 Publication
 ------
-I published this paper as the second author during my bachelor's, working on computer vision and deep learning.
+I worked on computer vision and deep learning during my bachelor's and published a paper as the second author.
 ### [Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection](https://ojs.aaai.org//index.php/AAAI/article/view/6913)
 
 - [Ruihai Wu](https://warshallrho.github.io/), **Kehan Xu**, Chenchen Liu, Nan Zhuang, [Yadong Mu](http://www.muyadong.com)
@@ -53,6 +53,6 @@ Proficient in:
 
 Languages
 ------
-- English: Fluent
-- Japanese: Fluent
-- Chinese: Mother Tongue
+- **English:** Fluent
+- **Japanese:** Fluent
+- **Chinese:** Mother Tongue
