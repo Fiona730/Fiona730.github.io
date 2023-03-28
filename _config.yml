@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kehan Xu / Personal Page"
+title                    : "Kehan Xu"
 title_separator          : "-"
 name                     : &name "Kehan Xu"
 description              : &description "personal description"
