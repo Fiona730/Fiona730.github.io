@@ -1,12 +1,16 @@
 ---
-permalink: /
-title: "Welcome to Kehan's Homepage"
-excerpt: "About me"
+layout: archive
+title: "Portfolio"
+permalink: /portfolio/
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
+
+<!-- {% include base_path %}
+
+
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %} -->
 
 About Me
 ------
@@ -19,19 +23,3 @@ I had a gap year during the pandemic in 2021, and worked as a full time graphics
 I used to work on computer vision and deep learning during my bachelor, but is now fully devoted to the field of computer grpahics.
 
 I draw digital illustration and enjoy watching musicals in my leisure time.
-
-<!-- Publications
-------
-### [Localize, Assemble, and Predicate: Contextual Object Proposal Embedding for Visual Relation Detection](https://ojs.aaai.org//index.php/AAAI/article/view/6913)
-
-- [Ruihai Wu](https://warshallrho.github.io/), **Kehan Xu**, Chenchen Liu, Nan Zhuang, [Yadong Mu](http://www.muyadong.com)
-- AAAI 2020, oral presentation
-
-Experience
-------
-- Fulltime Graphics Engineer and Techinical Artist at ByteDance Oasis Studio
-- Software Engineering Intern at Tencent Morefun Studio Group
-- Software Engineering Intern at Google TensorFlow Team
-- Research Intern at [Megvii](https://www.megvii.com/en)
-- Summer Intern at University of California, Merced supervised by Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/)
-- Research Assistant at Peking University advised by Prof. [Yadong Mu](http://www.muyadong.com) -->
