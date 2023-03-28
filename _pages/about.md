@@ -10,15 +10,15 @@ redirect_from:
 
 About Me
 ------
-I am a second year Computer Science master student at [ETH Zurich](https://inf.ethz.ch), majoring in Computer Graphics. I earned my bachelor's degree in Computer Science from [Peking University](https://english.pku.edu.cn) in 2020.
+I am a second year Computer Science master student at [ETH Zurich](https://inf.ethz.ch), specializing in Computer Graphics. I obtained my bachelor's degree in Computer Science from [Peking University](https://english.pku.edu.cn) in 2020.
 
-I am an ethusiast for rendering, especially the field of physcially-based rendering, but real-time rendering also interests me. I am mesmerized by rendering algorithms in that they create amazing on-screen visual effects based on a broad range of knowledge and skills: the principles of physics, mathematical tools, computer science theory and clever software engineering tricks. When it comes to rendering, I am self-motivated to research state-of-the-art papers and play with the code.
+As an ethusiast of rendering, I am particularly captivated by the field of **physically-based rendering**, while real-time rendering also piques my interest. I find rendering algorithms fascinating as they utilize a broad range of knowledge and skills, including the principles of physics, mathematical tools, computer science theory, and clever software engineering tricks to produce spectacular visual effects on-screen. My passion for rendering is self-motivating, driving me to explore cutting-edge research papers and tinker with code.
 
-I had a gap year during the pandemic in 2021, and worked as a full time graphics engineer and techinical artist at [Nuverse](https://www.nvsgames.com/sg), the game studio of [ByteDance](https://www.bytedance.com/en/).
+During the pandemic-induced gap year in 2021, I had the opportunity to work full-time as a graphics engineer and technical artist at [Nuverse](https://www.nvsgames.com/sg), the game studio of [ByteDance](https://www.bytedance.com/en/).
 
-I used to work on computer vision and deep learning during my bachelor, but is now fully devoted to the field of computer grpahics.
+Although I have previously worked on computer vision and deep learning during my undergraduate studies, my current focus is exclusively on computer graphics.
 
-I draw digital illustration and enjoy watching musicals in my leisure time.
+In my leisure time, I enjoy creating digital illustrations and watching musicals.
 
 <!-- Publications
 ------

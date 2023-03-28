@@ -1,6 +1,6 @@
 ---
-title: "Nori CPU Renderer"
-excerpt: "My own physically-based renderer built upon Nori with extended functionalities.<br/><img src='/protofolio/Nori.png' height='600'>"
+title: "Portfolio item number 1"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
