@@ -1,0 +1,59 @@
+---
+title: "Week 1"
+excerpt: "Transmittance Result <br/><img src='/images/thesis/cbox_volpath_vdb_mis_delta.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../report.css">
+	<script src="../ImageBox.js"></script>
+</head>
+
+<script type="text/javascript">
+	var imageBoxes = [
+		{
+			"elements": [
+                "/images/thesis/cbox_volpath_vdb_mis_ratio8192.png",
+				"/images/thesis/cbox_volpath_vdb_mis_delta.png",
+				"/images/thesis/cbox_volpath_vdb_mis_ratio.png",
+				"/images/thesis/cbox_volpath_vdb_mis_nextFlight.png",
+				"/images/thesis/cbox_volpath_vdb_mis_PCMF.png",
+				"/images/thesis/cbox_volpath_vdb_mis_unbiasedRM.png",
+                "/images/thesis/cbox_volpath_vdb_mis_debiask4.png",
+			],
+			"enableInsets": true,
+			"insetSize": 192,
+			"insetZoom": 3,
+            "imgWidth": 800,
+			"names": [
+                "GT",
+				"Delta",
+				"Ratio",
+				"Next Flight",
+				"P-CMF",
+				"Unbiased RM",
+                "Debias"
+			],
+			"title": "Transmittance Estimation Techniques"
+		}
+	];
+
+	function setup() {
+		var content = document.getElementById("content");
+		
+		for (var i = 0; i < imageBoxes.length; i++)
+			new ImageBox(content, imageBoxes[i]);
+	}
+</script>
+
+<body onload="setup();">
+	<div class="content" id="content">
+	</div>
+</body>
+</html>
+

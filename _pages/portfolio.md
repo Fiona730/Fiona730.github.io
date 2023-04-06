@@ -27,7 +27,7 @@ This webpage lists a rough description for each project. Please refer to the cor
 
 Nori CPU Renderer
 ------
-<p align="center"><img src="../images/protofolio/Blender_Nori.png"></p>
+<p align="center"><img src="../images/portfolio/Blender_Nori.png"></p>
 <p align="center"><i>Left: Blender &nbsp;&nbsp;&nbsp;&nbsp; Right: Nori</i></p>
 
 This is my own offline physically-based renderer based on the educational ray tracing framework Nori 2, written in C++.
@@ -43,7 +43,7 @@ Writing my own renderer is a lot of fun :)
 
 Stochastic Progressive Photon Mapping CPU Optimization
 ------
-<p align="center"><img src="../images/protofolio/SPPM_Render.png"> <img src="../images/protofolio/SPPM_FlopsPerCycle.png" style="height: 300px;"></p>
+<p align="center"><img src="../images/portfolio/SPPM_Render.png"> <img src="../images/portfolio/SPPM_FlopsPerCycle.png" style="height: 300px;"></p>
 
 In this project, as a group of four people, we implemented **stochastic progressive photon mapping** in C and performs multiple stages of CPU optimization. Due to the need of SPPM to store visible points in each iteration, this application is heavily memory-bound rather than compute-bound. The final result is a **fully-vectorized (SIMD) algorithm** with Intel intrinsics, and cache misses are minimized through changing data structure layout. It achieves up to a **22.69x** speedup over the baseline implementation.
 
@@ -54,7 +54,7 @@ In this project, as a group of four people, we implemented **stochastic progress
 
 Hexagon Running Game
 ------
-<p align="center"><img src="../images/protofolio/HexagonGame.png" style="height: 400px;"></p>
+<p align="center"><img src="../images/portfolio/HexagonGame.png" style="height: 400px;"></p>
 
 This is a running game with running paths formed by hexagons, designed and made by myself with **Unity**. The project is constructed with the idea of **procedural content generation** in mind. Actually, everything in the scene is generated automatically based solely on a user input random integer, including the hexagon path as well as the plants, rocks and the terrain. In other words, changing the random seed will lead to a completely different parkour path and environment, which stimulates the player's interest in keeping playing the game.
 
@@ -65,7 +65,7 @@ This is a running game with running paths formed by hexagons, designed and made 
 
 Position Based Fluids
 ------
-<p align="center"><img src="../images/protofolio/PBF.png"></p>
+<p align="center"><img src="../images/portfolio/PBF.png"></p>
 
 As a group of three people, we implemented position based fluids method for fluid simulation in 3D space with **Taichi**, a high-performance parallel language wrapped in python. Object collision is also handled in our code to support objects contacting or inside the fluid.
 
