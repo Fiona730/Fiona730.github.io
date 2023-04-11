@@ -1,0 +1,123 @@
+---
+title: "Template"
+excerpt: "Jeri Template <br/><img src='/images/thesis/template/cbox_volpath_vdb_mis_delta.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Transmittance",
+				"children": [
+					{
+						"title": "Reference_SMAPE",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+					},
+					{
+						"title": "Delta",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_delta.exr"
+					},
+					{
+						"title": "2.069E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_delta.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					},
+					{
+						"title": "Ratio",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_ratio.exr"
+					},
+					{
+						"title": "2.001E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_ratio.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					},
+					{
+						"title": "NextFlight",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_nextFlight.exr"
+					},
+					{
+						"title": "2.145E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_nextFlight.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					},
+					{
+						"title": "P-CMF",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_PCMF.exr"
+					},
+					{
+						"title": "2.025E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_PCMF.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					},
+					{
+						"title": "Unbiased RM",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_unbiasedRM.exr"
+					},
+					{
+						"title": "2.013E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_unbiasedRM.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					},
+					{
+						"title": "Debias",
+						"image": "/images/thesis/template/cbox_volpath_vdb_mis_debiask4.exr"
+					},
+					{
+						"title": "2.020E-02",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/template/cbox_volpath_vdb_mis_debiask4.exr",
+							"imageB": "/images/thesis/template/cbox_volpath_vdb_mis_ratio8192.exr"
+						}
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>

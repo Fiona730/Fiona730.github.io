@@ -1,6 +1,6 @@
 ---
 title: "Week 1"
-excerpt: "Transmittance Result <br/><img src='/images/thesis/cbox_volpath_vdb_mis_delta.png' style='height: 400px;'>"
+excerpt: "Test Scene <br/><img src='/images/thesis/week1/bunny-cloud-thick-hetero-256spp.png' style='height: 400px;'>"
 collection: thesis
 ---
 
@@ -18,28 +18,88 @@ collection: thesis
 	var imageBoxes = [
 		{
 			"elements": [
-                "/images/thesis/cbox_volpath_vdb_mis_ratio8192.png",
-				"/images/thesis/cbox_volpath_vdb_mis_delta.png",
-				"/images/thesis/cbox_volpath_vdb_mis_ratio.png",
-				"/images/thesis/cbox_volpath_vdb_mis_nextFlight.png",
-				"/images/thesis/cbox_volpath_vdb_mis_PCMF.png",
-				"/images/thesis/cbox_volpath_vdb_mis_unbiasedRM.png",
-                "/images/thesis/cbox_volpath_vdb_mis_debiask4.png",
+                "/images/thesis/week1/bunny-cloud-thin-homo-8spp.png",
+				"/images/thesis/week1/bunny-cloud-thin-homo-64spp.png",
+				"/images/thesis/week1/bunny-cloud-thin-homo-256spp.png"
 			],
 			"enableInsets": true,
 			"insetSize": 192,
 			"insetZoom": 3,
             "imgWidth": 800,
 			"names": [
-                "GT",
-				"Delta",
-				"Ratio",
-				"Next Flight",
-				"P-CMF",
-				"Unbiased RM",
-                "Debias"
+                "8spp",
+				"64spp",
+				"256spp",
 			],
-			"title": "Transmittance Estimation Techniques"
+			"title": "Thin Homogeneous Medium, Black Background"
+		},
+		{
+			"elements": [
+                "/images/thesis/week1/bunny-cloud-thin-hetero-8spp.png",
+				"/images/thesis/week1/bunny-cloud-thin-hetero-64spp.png",
+				"/images/thesis/week1/bunny-cloud-thin-hetero-256spp.png"
+			],
+			"enableInsets": true,
+			"insetSize": 192,
+			"insetZoom": 3,
+            "imgWidth": 800,
+			"names": [
+                "8spp",
+				"64spp",
+				"256spp",
+			],
+			"title": "Thin Heterogeneous Medium, Black Background"
+		},
+		{
+			"elements": [
+                "/images/thesis/week1/bunny-cloud-thick-homo-8spp.png",
+				"/images/thesis/week1/bunny-cloud-thick-homo-64spp.png",
+				"/images/thesis/week1/bunny-cloud-thick-homo-256spp.png"
+			],
+			"enableInsets": true,
+			"insetSize": 192,
+			"insetZoom": 3,
+            "imgWidth": 800,
+			"names": [
+                "8spp",
+				"64spp",
+				"256spp",
+			],
+			"title": "Thick Homogeneous Medium, Lit from Behind"
+		},
+		{
+			"elements": [
+                "/images/thesis/week1/bunny-cloud-thick-hetero-8spp.png",
+				"/images/thesis/week1/bunny-cloud-thick-hetero-64spp.png",
+				"/images/thesis/week1/bunny-cloud-thick-hetero-256spp.png"
+			],
+			"enableInsets": true,
+			"insetSize": 192,
+			"insetZoom": 3,
+            "imgWidth": 800,
+			"names": [
+                "8spp",
+				"64spp",
+				"256spp",
+			],
+			"title": "Thick Heterogeneous Medium, Lit from Behind"
+		},
+		{
+			"elements": [
+                "/images/thesis/week1/bunny-cloud-simple-transport-8spp.png",
+				"/images/thesis/week1/bunny-cloud-simple-transport-64spp.png",
+				"/images/thesis/week1/bunny-cloud-simple-transport-256spp.png"
+			],
+			"enableInsets": true,
+			"insetSize": 192,
+			"insetZoom": 3,
+            "imgWidth": 800,
+			"names": [
+                "8spp",
+				"64spp",
+				"256spp",
+			],
+			"title": "Thin Heterogeneous Medium, Volume Dominates Variance"
 		}
 	];
 
