@@ -8,11 +8,13 @@ var ImageBox = function(parent, config) {
 	this.selectorGroup = document.createElement("div"); 
 	this.selectorGroup.className = "selector-group";
 	
+	/////// compute SMAPE from PNG values
 	// this.imageDataArray = Array(this.elements.length);
 	// this.counter = 0;
 	// for (var i = 0; i < this.elements.length; i++) {
 	// 	this.getImagePixel(this.elements[i], i, this.elements.length, this.computeImageErrorAll);
 	// }
+	///////
 
 	this.selectors = [];
 	for (var i = 0; i < this.elements.length; i++) {
@@ -21,9 +23,12 @@ var ImageBox = function(parent, config) {
 		if (i == 0)
 			selector.className += " active";
 		selector.appendChild(document.createTextNode(this.names[i]));
+		
+		/////// compute SMAPE from PNG values
 		// selector.appendChild(document.createElement("br"));
 		// if (i == 0)
 		// 	selector.appendChild(document.createTextNode("SMAPE:"));
+		///////
 		
 		selector.addEventListener("mouseover", function(idx, event) {
 			this.selectImage(idx);
