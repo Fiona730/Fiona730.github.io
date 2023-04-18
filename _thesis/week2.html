@@ -1,0 +1,117 @@
+---
+title: "Week 2"
+excerpt: "Equiangular Sampling Intermediate Results <br/><img src='/images/thesis/week2/bunny-NEE-4096spp-GT.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Homogeneous + Area Light, path len = 3",
+				"children": [
+					{
+						"title": "GT (NEE 4096 spp)",
+						"image": "/images/thesis/week2/homogeneous-d1-NEE-4096spp-GT.exr"
+					},
+					{
+						"title": "NEE 256 spp",
+						"image": "/images/thesis/week2/homogeneous-d1-NEE-256spp.exr"
+					},
+					{
+						"title": "NEE Error",
+						"image": "/images/thesis/week2/homogeneous-d1-NEE-256spp-error.png"
+					},
+					{
+						"title": "Equi 256 spp",
+						"image": "/images/thesis/week2/homogeneous-d1-Equi-256spp.exr"
+					},
+					{
+						"title": "Equi Error",
+						"image": "/images/thesis/week2/homogeneous-d1-Equi-256spp-error.png"
+					}
+				]
+			},
+			{
+				"title": "Homogeneous + Area Light, 3 <= path len <= 50",
+				"children": [
+				{
+						"title": "GT (NEE 4096 spp)",
+						"image": "/images/thesis/week2/homogeneous-d50-NEE-4096spp-GT.exr"
+					},
+					{
+						"title": "NEE 256 spp",
+						"image": "/images/thesis/week2/homogeneous-d50-NEE-256spp.exr"
+					},
+					{
+						"title": "NEE Error",
+						"image": "/images/thesis/week2/homogeneous-d50-NEE-256spp-error.png"
+					},
+					{
+						"title": "Equi 256 spp",
+						"image": "/images/thesis/week2/homogeneous-d50-Equi-256spp.exr"
+					},
+					{
+						"title": "Equi Error",
+						"image": "/images/thesis/week2/homogeneous-d50-Equi-256spp-error.png"
+					}
+				]
+			},
+			{
+				"title": "Heterogeneous + Sphere Light, 3 <= path len <= 50",
+				"children": [
+					{
+						"title": "GT (NEE 4096 spp)",
+						"image": "/images/thesis/week2/bunny-NEE-4096spp-GT.exr"
+					},
+					{
+						"title": "NEE 1024 spp",
+						"image": "/images/thesis/week2/bunny-NEE-1024spp.exr"
+					},
+					{
+						"title": "NEE Error",
+						"image": "/images/thesis/week2/bunny-NEE-1024spp-error.png"
+					},
+					{
+						"title": "Equi 1024 spp",
+						"image": "/images/thesis/week2/bunny-Equi-1024spp.exr"
+					},
+					{
+						"title": "Equi Error",
+						"image": "/images/thesis/week2/bunny-Equi-1024spp-error.png"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
