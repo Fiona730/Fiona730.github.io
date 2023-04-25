@@ -1,0 +1,224 @@
+---
+title: "Week 3"
+excerpt: "Equiangular Sampling & Force Scattering <br/><img src='/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_MIS_256spp.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Bias Check (Area Light)",
+				"children": [
+					{
+						"title": "NEE 1024 spp",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_0_1024spp.exr"
+					},
+					{
+						"title": "NEE 64*16 spp",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_avg_64spp.exr"
+					},
+					{
+						"title": "Absolute Error",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_1024spp_error_PosNeg.exr"
+					},
+					{
+						"title": "Relative (SMAPE 1.330E-1)",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_1024spp_error_RelPosNeg.exr"
+					},
+					{
+						"title": "Equi 1024 spp",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_Equi_0_1024spp.exr"
+					},
+					{
+						"title": "Equi NEE Absolute Error",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_Equi_1024spp_error_PosNeg.exr"
+					},
+					{
+						"title": "Relative (SMAPE 1.881E-1)",
+						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_Equi_1024spp_error_RelPosNeg.exr"
+					},
+				]
+			},
+			{
+				"title": "Bias Check & MIS (Point Light)",
+				"children": [
+ 					{
+						"title": "GT (32768 spp)",
+						"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr"
+					},
+					{
+						"title": "NEE 1024 spp",
+						"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_1024spp.exr"
+					},
+					{
+						"title": "Error",
+						"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_1024spp_error_PosNeg.exr"
+					},
+					// {
+					// 	"title": "Relative (SMAPE 3.874E-2)",
+					// 	"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_1024spp_error_RelPosNeg.exr"
+					// },
+					{
+						"title": "3.874E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr",
+							"imageB": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_1024spp.exr"
+						}
+					},
+					{
+						"title": "Equi 1024 spp",
+						"image": "/images/thesis/week3/checkBias/pointLight_full_Equi_0_1024spp.exr"
+					},
+					{
+						"title": "Equi GT Absolute Error",
+						"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_Equi_1024spp_error_PosNeg.exr"
+					},
+					// {
+					// 	"title": "Relative (SMAPE 3.307E-2)",
+					// 	"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_Equi_1024spp_error_RelPosNeg.exr"
+					// },
+					{
+						"title": "3.307E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr",
+							"imageB": "/images/thesis/week3/checkBias/pointLight_full_Equi_0_1024spp.exr"
+						}
+					},
+					{
+						"title": "MIS 1024 spp",
+						"image": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS-1024spp.exr"
+					},
+					{
+						"title": "MIS GT Absolute Error",
+						"image": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS_1024spp_error_PosNeg.exr"
+					},
+					// {
+					// 	"title": "Relative (SMAPE 3.284E-2)",
+					// 	"image": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS_1024spp_error_RelPosNeg.exr"
+					// }
+					{
+						"title": "3.284E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr",
+							"imageB": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS-1024spp.exr"
+						}
+					}
+				]
+			},
+			{
+				"title": "Equiangular (Sigma = 0.1)",
+				"children": [
+					{
+						"title": "NEE",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_NEE_256spp.exr"
+					},
+					{
+						"title": "Equi",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_Equi_256spp.exr"
+					},
+					{
+						"title": "MIS",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_MIS_256spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Equiangular (Sigma = 1)",
+				"children": [
+					{
+						"title": "NEE",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_NEE_256spp.exr"
+					},
+					{
+						"title": "Equi",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_Equi_256spp.exr"
+					},
+					{
+						"title": "MIS",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_MIS_256spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Equiangular (Sigma = 1.5)",
+				"children": [
+					{
+						"title": "NEE",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_NEE_256spp.exr"
+					},
+					{
+						"title": "Equi",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_Equi_256spp.exr"
+					},
+					{
+						"title": "MIS",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_MIS_256spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Force Scattering (Homogeneous, Scatter Prob = 80%)",
+				"children": [
+ 					{
+						"title": "Tr-based (8 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-8spp.exr"
+					},
+					{
+						"title": "Force (8 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-8spp-effi.exr"
+					},
+					{
+						"title": "Tr-based (256 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-256spp.exr"
+					},
+					{
+						"title": "Force (256 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-256spp-effi.exr"
+					},
+					{
+						"title": "Tr-based (4096 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-4096spp.exr"
+					},
+					{
+						"title": "Force (4096 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-4096spp-effi.exr"
+					},
+				]
+			},
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
