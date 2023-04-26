@@ -191,13 +191,13 @@ function parseExr(data) {
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "exr-wrap.js";
+module.exports = "/assets/js/exr-wrap.js"; // __webpack_require__.p + "exr-wrap.js";
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "exr-wrap.wasm";
+module.exports = "/assets/js/exr-wrap.wasm"; // __webpack_require__.p + "exr-wrap.wasm";
 
 /***/ })
 /******/ ]);
