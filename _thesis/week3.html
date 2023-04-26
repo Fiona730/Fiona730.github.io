@@ -1,6 +1,6 @@
 ---
 title: "Week 3"
-excerpt: "Equiangular Sampling & Force Scattering <br/><img src='/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_MIS_256spp.png' style='height: 400px;'>"
+excerpt: "Equiangular Sampling & Force Scattering <br/><img src='/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_256spp.png' style='height: 400px;'>"
 collection: thesis
 ---
 
@@ -61,7 +61,7 @@ collection: thesis
 						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_Equi_1024spp_error_PosNeg.exr"
 					},
 					{
-						"title": "Relative (SMAPE 1.881E-1)",
+						"title": "Relative (SMAPE 1.593E-1)",
 						"image": "/images/thesis/week3/checkBias/areaLight_full_NEE_Equi_1024spp_error_RelPosNeg.exr"
 					},
 				]
@@ -98,79 +98,111 @@ collection: thesis
 						"image": "/images/thesis/week3/checkBias/pointLight_full_NEE_Equi_1024spp_error_PosNeg.exr"
 					},
 					{
-						"title": "3.307E-2",
+						"title": "2.392E-2",
 						"lossMap": {
 							"function": "SMAPE",
 							"imageA": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr",
 							"imageB": "/images/thesis/week3/checkBias/pointLight_full_Equi_0_1024spp.exr"
 						}
-					},
-					{
-						"title": "MIS 1024 spp",
-						"image": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS-1024spp.exr"
-					},
-					{
-						"title": "MIS GT Absolute Error",
-						"image": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS_1024spp_error_PosNeg.exr"
-					},
-					{
-						"title": "3.284E-2",
-						"lossMap": {
-							"function": "SMAPE",
-							"imageA": "/images/thesis/week3/checkBias/pointLight_full_NEE_0_32768spp.exr",
-							"imageB": "/images/thesis/week3/equiangular/validation-pointLight-homo-d1-equiMIS-1024spp.exr"
-						}
 					}
 				]
 			},
 			{
-				"title": "Equiangular (Sigma = 0.1)",
+				"title": "Sphere in Volume",
 				"children": [
 					{
-						"title": "NEE",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_NEE_256spp.exr"
+						"title": "NEE (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_NEE_8spp.exr"
 					},
 					{
-						"title": "Equi",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_Equi_256spp.exr"
+						"title": "Equi (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_8spp.exr"
 					},
 					{
-						"title": "MIS",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_MIS_256spp.exr"
+						"title": "MIS (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_MIS_8spp.exr"
+					},
+					{
+						"title": "NEE (256spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_NEE_256spp.exr"
+					},
+					{
+						"title": "Equi (256pp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_256spp.exr"
+					},
+					{
+						"title": "MIS (256spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_MIS_256spp.exr"
 					}
 				]
 			},
 			{
-				"title": "Equiangular (Sigma = 1)",
+				"title": "Volume Cube (Point Light)",
 				"children": [
 					{
-						"title": "NEE",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_NEE_256spp.exr"
+						"title": "NEE (8spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_NEE_8spp.exr"
 					},
 					{
-						"title": "Equi",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_Equi_256spp.exr"
+						"title": "Equi (8spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_Equi_8spp.exr"
 					},
 					{
-						"title": "MIS",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_MIS_256spp.exr"
+						"title": "MIS (8spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_MIS_8spp.exr"
+					},
+					{
+						"title": "NEE (64spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_NEE_64spp.exr"
+					},
+					{
+						"title": "Equi (64spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_Equi_64spp.exr"
+					},
+					{
+						"title": "MIS (64spp)",
+						"image": "/images/thesis/week3/equiangular/volume-cube_pointlight_equiDepth0_MIS_64spp.exr"
 					}
 				]
 			},
 			{
-				"title": "Equiangular (Sigma = 1.5)",
+				"title": "Equiangular (Sigma, 64spp)",
 				"children": [
 					{
-						"title": "NEE",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_NEE_256spp.exr"
+						"title": "NEE (0.1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_NEE_64spp.exr"
 					},
 					{
-						"title": "Equi",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_Equi_256spp.exr"
+						"title": "Equi (0.1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_Equi_64spp.exr"
 					},
 					{
-						"title": "MIS",
-						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_MIS_256spp.exr"
+						"title": "MIS (0.1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma0.1_MIS_64spp.exr"
+					},
+					{
+						"title": "NEE (1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_NEE_64spp.exr"
+					},
+					{
+						"title": "Equi (1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_Equi_64spp.exr"
+					},
+					{
+						"title": "MIS (1)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1_MIS_64spp.exr"
+					},
+					{
+						"title": "NEE (1.5)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_NEE_64spp.exr"
+					},
+					{
+						"title": "Equi (1.5)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_Equi_64spp.exr"
+					},
+					{
+						"title": "MIS (1.5)",
+						"image": "/images/thesis/week3/equiangular/pointLight_fill_sigma1.5_MIS_64spp.exr"
 					}
 				]
 			},
