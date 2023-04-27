@@ -1,0 +1,71 @@
+---
+title: "Week 4"
+excerpt: "MIS For Force Scattering <br/><img src='/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_256spp.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "MIS Between Force Scattering and Distance Sampling (50% & 50%)",
+				"children": [
+ 					{
+						"title": "Tr-based (8 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-8spp.exr"
+					},
+					{
+						"title": "Force (8 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-8spp-effi.exr"
+					},
+					{
+						"title": "MIS (8 spp)",
+						"image": "/images/thesis/week4/forceScatterMIS/thin-homo-d1-sigma0.001-8spp-MIS.exr"
+					},
+					{
+						"title": "Tr-based (256 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-256spp.exr"
+					},
+					{
+						"title": "Force (256 spp)",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-256spp-effi.exr"
+					},
+					{
+						"title": "MIS (256 spp)",
+						"image": "/images/thesis/week4/forceScatterMIS/thin-homo-d1-sigma0.001-256spp-MIS.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
