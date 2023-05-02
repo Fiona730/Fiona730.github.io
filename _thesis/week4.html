@@ -1,6 +1,6 @@
 ---
 title: "Week 4"
-excerpt: "MIS For Force Scattering <br/><img src='/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_256spp.png' style='height: 400px;'>"
+excerpt: "MIS For Force Scattering <br/><img src='/images/thesis/week4/forceScatter/thin-hetero-bunny-d1-sigma0.1-181248spp.png' style='height: 400px;'>"
 collection: thesis
 ---
 
@@ -37,7 +37,7 @@ collection: thesis
 				"title": "Equiangular Area Light",
 				"children": [
  					{
-						"title": "Scene 1 (Area Light): NEE",
+						"title": "Scene 1 (Sphere Area Light): NEE",
 						"image": "/images/thesis/week4/equiangularBias/equiangular-point-homo-fill-0.1-NEE.exr"
 					},
 					{
@@ -50,7 +50,7 @@ collection: thesis
 						"tonemapGroup": 1
 					},
 					{
-						"title": "Scene 2 (Area Light): NEE",
+						"title": "Scene 2 (Sphere Area Light): NEE",
 						"image": "/images/thesis/week4/equiangularBias/validation-equiangular-point-homo-NEE.exr"
 					},
 					{
@@ -63,16 +63,42 @@ collection: thesis
 						"tonemapGroup": 1
 					},
 					{
-						"title": "Scene 3 (Point Light): NEE",
-						"image": "/images/thesis/week4/equiangularBias/volume-cube-NEE.exr"
+						"title": "Scene 3 (Planar Area Light): NEE",
+						"image": "/images/thesis/week4/equiangularBias/validation-equiangular-area-NEE.exr"
 					},
 					{
 						"title": "3 Equi",
-						"image": "/images/thesis/week4/equiangularBias/volume-cube-Equi.exr"
+						"image": "/images/thesis/week4/equiangularBias/validation-equiangular-area-Equi.exr"
 					},
 					{
 						"title": "3 Diff",
+						"image": "/images/thesis/week4/equiangularBias/validation-equiangular-area_error_PosNeg.exr",
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Scene 4 (Point Light): NEE",
+						"image": "/images/thesis/week4/equiangularBias/volume-cube-NEE.exr"
+					},
+					{
+						"title": "4 Equi",
+						"image": "/images/thesis/week4/equiangularBias/volume-cube-Equi.exr"
+					},
+					{
+						"title": "4 Diff",
 						"image": "/images/thesis/week4/equiangularBias/volume-cube_error_PosNeg.exr",
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Scene 5 (Spotlight): NEE",
+						"image": "/images/thesis/week4/equiangularBias/volume-cube-spotlight-NEE.exr"
+					},
+					{
+						"title": "5 Equi",
+						"image": "/images/thesis/week4/equiangularBias/volume-cube-spotlight-Equi.exr"
+					},
+					{
+						"title": "5 Diff",
+						"image": "/images/thesis/week4/equiangularBias/volume-cube-spotlight_error_PosNeg.exr",
 						"tonemapGroup": 1
 					}
 				]
@@ -219,6 +245,144 @@ collection: thesis
 						"title": "Force + Null-collision Bias (256, 5.486E-2)",
 						"image": "/images/thesis/week4/forceScatter/thin-hetero-bunny-d1-sigma0.1-256spp-effi-biased.exr"
 					}
+				]
+			},
+			{
+				"title": "Heterogeneous (Problematic)",
+				"children": [
+					{
+						"title": "Distance (16 spp)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-16spp.exr"
+					},
+					{
+						"title": "Force (16, scatter prob=0.8)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-16spp-scatter0.8-boundaryArtifact.exr"
+					},
+					{
+						"title": "Force (16, scatter prob=0.99)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-16spp-scatter0.99-boundaryArtifact.exr"
+					},
+					{
+						"title": "Distance (256 spp)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-256spp.exr"
+					},
+					{
+						"title": "Force (256, scatter prob=0.8)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-256spp-scatter0.8-boundaryArtifact.exr"
+					},
+					{
+						"title": "Force (256, scatter prob=0.99)",
+						"image": "/images/thesis/week4/heteroBound/gbuffer-bunny-cloud-forceSurf-256spp-scatter0.99-boundaryArtifact.exr"
+					}
+				]
+			},
+			{
+				"title": "GBuffer",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp.exr"
+					},
+					{
+						"title": "VolumeScatterProb",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_VolScatterProb.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_VolContrib.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_RelVar.exr"
+					},
+					{
+						"title": "Relative Sur Var",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Vol Var",
+						"image": "/images/thesis/week4/gBuffer/gbuffer-bunny-cloud-256spp_RelVolVar.exr"
+					},
+				]
+			},
+			{
+				"title": "Scatter Probability Visualization (Homo, 256spp)",
+				"children": [
+					{
+						"title": "Distance",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-thin-homo-sphere-256spp-distance.exr",
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Img",
+						"image": "/images/thesis/week3/forceScatter/thin-homo-d1-sigma0.001-256spp.exr"
+					},
+					{
+						"title": "Force, p=0.8",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-thin-homo-sphere-256spp-force-p0.8.exr",
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Img 2",
+						"image": "/images/thesis/week4/forceScatter/thin-homo-d1-sigma0.001-256spp-TrOri.exr"
+					},
+					{
+						"title": "Force, p=0.99",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-thin-homo-sphere-256spp-force-p0.99.exr",
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Img 3",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-thin-homo-sphere-256spp-force-p0.99_rgb.exr"
+					},
+				]
+			},
+			{
+				"title": "Scatter Probability Visualization (Hetero, 256spp)",
+				"children": [
+					{
+						"title": "Distance",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp.exr",
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Img",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp_rgb.exr"
+					},
+					{
+						"title": "Force, p=0.8",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp-force-p0.8.exr",
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Img 2",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp-force-p0.8_rgb.exr"
+					},
+					{
+						"title": "Force, p=0.8, biased",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp-force-p0.8-biased.exr",
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Img 3",
+						"image": "/images/thesis/week4/scatterProb/gbuffer-force-scattering-thin-hetero-bunny-256spp-force-p0.8-biased_rgb.exr"
+					},
 				]
 			}
 		]
