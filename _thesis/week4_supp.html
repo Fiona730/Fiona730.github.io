@@ -1,0 +1,279 @@
+---
+title: "Week 4 (Supplementary)"
+excerpt: "Fixed Bugs in Equiangular Sampling MIS <br/><img src='/images/thesis/week4/equiangularCorrect/validation-equiangular-area-NEE-GT.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Sphere Area Light",
+				"children": [
+					{
+						"title": "NEE GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-NEE-GT.exr"
+					},
+					{
+						"title": "Equi GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-Equi-GT.exr"
+					},
+					{
+						"title": "MIS GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-MIS-GT.exr"
+					},
+					{
+						"title": "NEE 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-NEE.exr"
+					},
+					{
+						"title": "SMAPE: 1.448E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-NEE.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Equi 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-Equi.exr"
+					},
+					{
+						"title": "7.917E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-Equi.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "MIS 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-MIS.exr"
+					},
+					{
+						"title": "8.114E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-point-homo-64spp-MIS.exr"
+						},
+						"tonemapGroup": 1
+					}
+				]
+			},
+			{
+				"title": "Planar Area Light",
+				"children": [
+					{
+						"title": "NEE GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-NEE-GT.exr"
+					},
+					{
+						"title": "Equi GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-Equi-GT.exr"
+					},
+					{
+						"title": "MIS GT",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-MIS-GT.exr"
+					},
+					{
+						"title": "NEE 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-NEE.exr"
+					},
+					{
+						"title": "SMAPE: 3.275E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-NEE.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Equi 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-Equi.exr"
+					},
+					{
+						"title": "2.702E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-Equi.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "MIS 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-MIS.exr"
+					},
+					{
+						"title": "2.683E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/validation-equiangular-area-64spp-MIS.exr"
+						},
+						"tonemapGroup": 2
+					}
+				]
+			},
+			{
+				"title": "Volume Cube Spotlight",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week4/equiangularCorrect/volume-cube-spotlight-NEE-GT.exr"
+					},
+					{
+						"title": "NEE 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-NEE.exr"
+					},
+					{
+						"title": "SMAPE: 6.274E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/volume-cube-spotlight-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-NEE.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Equi 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-Equi.exr"
+					},
+					{
+						"title": "4.643E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/volume-cube-spotlight-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-Equi.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "MIS 64spp",
+						"image": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-MIS.exr"
+					},
+					{
+						"title": "4.158E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/volume-cube-spotlight-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/volume-cube-spot-64spp-MIS.exr"
+						},
+						"tonemapGroup": 2
+					}
+				]
+			},
+			{
+				"title": "Sphere in Volume",
+				"children": [
+					{
+						"title": "NEE (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_NEE_8spp.exr"
+					},
+					{
+						"title": "Equi (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_8spp.exr"
+					},
+					{
+						"title": "MIS (8spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_MIS_8spp.exr"
+					},
+					{
+						"title": "NEE (256spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_NEE_256spp.exr"
+					},
+					{
+						"title": "Equi (256pp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_Equi_256spp.exr"
+					},
+					{
+						"title": "MIS (256spp)",
+						"image": "/images/thesis/week3/equiangular/equiangular-paper-spheres-fill_equiDepth0_MIS_256spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Bunny (Tr dominant)",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE-GT.exr"
+					},
+					{
+						"title": "NEE 1024spp",
+						"image": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE_spp1024.exr"
+					},
+					{
+						"title": "SMAPE: 2.606E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE_spp1024.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Equi 1024spp",
+						"image": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-Equi_spp1024.exr"
+					},
+					{
+						"title": "6.969E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-Equi_spp1024.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "MIS 1024spp",
+						"image": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-MIS_spp1024.exr"
+					},
+					{
+						"title": "2.608E-2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-NEE-GT.exr",
+							"imageB": "/images/thesis/week4/equiangularCorrect/equiangular-point-bunny-MIS_spp1024.exr"
+						},
+						"tonemapGroup": 2
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
