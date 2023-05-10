@@ -1,0 +1,238 @@
+---
+title: "Week 5"
+excerpt: "Equiangular for Spotlight & GBuffer Denoising <br/><img src='/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_Var.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Equiangular Sampling Range Restriction for Spotlight",
+				"children": [
+					{
+						"title": "64spp, small volume range, depth=2, NEE",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-NEE-64spp.exr"
+					},
+					{
+						"title": "volume as range",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-EquiOnly-noRange-64spp.exr"
+					},
+					{
+						"title": "spotlight cone as range",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-Equi-range-64spp.exr"
+					},
+					{
+						"title": "depth=16, NEE",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-NEE-64spp.exr"
+					},
+					{
+						"title": "volume 1",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-Equi-noRange-64spp.exr"
+					},
+					{
+						"title": "spotlight 1",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-Equi-range-64spp.exr"
+					},
+					{
+						"title": "large volume range, depth=2, NEE",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-NEE-Range-64spp-largeVolume.exr"
+					},
+					{
+						"title": "volume 2",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-EquiOnly-noRange-64spp-largeVolume.exr"
+					},
+					{
+						"title": "spotlight 2",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d2-EquiOnly-Range-64spp-largeVolume.exr"
+					},
+					{
+						"title": "depth=16, NEE 1",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-NEE-Range-64spp-largeVolume.exr"
+					},
+					{
+						"title": "volume 3",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-Equi-noRange-64spp-largeVolume.exr"
+					},
+					{
+						"title": "spotlight 3",
+						"image": "/images/thesis/week5/spotlightRange/volume-cube-d16-Equi-Range-64spp-largeVolume.exr"
+					}
+				]
+			},
+			{
+				"title": "Equiangular Sampling Performance (Home and Hetero)",
+				"children": [
+					{
+						"title": "homogeneous bunny shape medium + 1 light, 8 spp, NEE",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-NEE-8spp-closeL.exr"
+					},
+					{
+						"title": "Equi 1",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-Equi-8spp-closeL.exr"
+					},
+					{
+						"title": "2 lights, NEE",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-NEE-8spp-closeL-2Lights.exr"
+					},
+					{
+						"title": "Equi 2",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-Equi-8spp-closeL-2Lights.exr"
+					},
+					{
+						"title": "add surface, NEE",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-NEE-8spp-closeL-2Lights-surf.exr"
+					},
+					{
+						"title": "Equi 3",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-Equi-8spp-closeL-2Lights-surf.exr"
+					},
+					{
+						"title": "thicker medium, NEE",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-NEE-8spp-closeL-2Lights-surf-sig5.exr"
+					},
+					{
+						"title": "Equi 4",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-homo-1light-Equi-8spp-closeL-2Lights-surf-sig5.exr"
+					},
+					{
+						"title": "heterogeneous thin medium, NEE",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-1light-NEE-8spp-thin.exr"
+					},
+					{
+						"title": "Equi 5",
+						"image": "/images/thesis/week5/equiangularPerf/equiangular-point-bunny-1light-Equi-8spp-thin.exr"
+					}
+				]
+			},
+			{
+				"title": "GBuffer (64spp)",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_RGB.exr"
+					},
+					{
+						"title": "VolumeScatterProb",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_RelVar.exr"
+					},
+					{
+						"title": "Relative Sur Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Vol Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "Denoised GBuffer",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_RGB.exr"
+					},
+					{
+						"title": "VolumeScatterProb",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_RelVar.exr"
+					},
+					{
+						"title": "Relative Sur Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Vol Var",
+						"image": "/images/thesis/week5/gBuffer/gbuffer-bunny-cloud-64spp-gbuffer-denoise_RelVolVar.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
