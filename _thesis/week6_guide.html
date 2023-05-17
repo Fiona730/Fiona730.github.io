@@ -1,0 +1,639 @@
+---
+title: "Week 6 (Guiding Results)"
+excerpt: "Guiding for Force Scattering <br/><img src='/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_RGB.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "1: GBuffer Scene (Homo + Surface), 64spp",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-noForce-natural_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "1: Denoised, 64spp",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-denoiseOutput_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "2: Static Probability, 8spp",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.8_RGB.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.99_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.8_VolScatterProb.exr"
+					},
+					{
+						"title": "Volume Scatter Prob 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.99_VolScatterProb.exr"
+					},
+					{
+						"title": "Surface Contribution 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.8_SurfContrib.exr"
+					},
+					{
+						"title": "Surface Contribution 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.99_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.8_VolContrib.exr"
+					},
+					{
+						"title": "Volume Contribution 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.99_VolContrib.exr"
+					},
+				]
+			},
+			{
+				"title": "3: Per-Pixel Statistics, 8spp",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.8_RGB.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-force-0.99_RGB.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-8spp-ref.exr"
+					},
+					{
+						"title": "(Denoise per 1 iter) Ratio of Vol / Surf Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_1intv_Contrib_RGB.exr"
+					},
+					{
+						"title": "Ratio of Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_1intv_Var_RGB.exr"
+					},
+					{
+						"title": "Ratio of Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_1intv_RelVar_RGB.exr"
+					},
+					{
+						"title": "(Denoise per 2 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_2intv_Contrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_2intv_Var.exr"
+					},
+					{
+						"title": "Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_8spp_2intv_RelVar.exr"
+					},
+				]
+			},
+			{
+				"title": "3: 64spp",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-force-0.8_RGB.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-force-0.99_RGB.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-ref.exr"
+					},
+					{
+						"title": "(Denoise per 1 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib.exr"
+					},
+					{
+						"title": "1 Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var.exr"
+					},
+					{
+						"title": "1 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar.exr"
+					},
+					{
+						"title": "(Denoise per 4 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_4intv_Contrib.exr"
+					},
+					{
+						"title": "4 Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_4intv_Var.exr"
+					},
+					{
+						"title": "4 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_4intv_RelVar.exr"
+					},
+					{
+						"title": "P = 0.8 VolScatterProb",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-64spp-force-0.8_VolScatterProb.exr"
+					},
+					{
+						"title": "1 iter, Contribution VolScatterProb",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_VolScatterProb.exr"
+					},
+					{
+						"title": "4 iter, Contribution VolScatterProb",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_4intv_Contrib_VolScatterProb.exr"
+					}
+				]
+			},
+			{
+				"title": "3: 256spp, Denoise Per 16 Iter",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-256spp-force-0.8.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-256spp-force-0.99.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf-256spp-natural-ref.exr"
+					},
+					{
+						"title": "(Denoise per 1 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_Contrib.exr"
+					},
+					{
+						"title": "1 Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_Var.exr"
+					},
+					{
+						"title": "1 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_RelVar.exr"
+					},
+					{
+						"title": "(Denoise per 16 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_Contrib.exr"
+					},
+					{
+						"title": "16 Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_Var.exr"
+					},
+					{
+						"title": "16 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_256spp_16intv_RelVar.exr"
+					}
+				]
+			},
+			{
+				"title": "4: Contribution, 64spp, 1iter",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Contrib_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "4: Variance",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_Var_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "4: Relative Variance",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHomo/gbuffer-force-scatter-homo-surf_natrual_64spp_1intv_RelVar_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "5: Hetero (RGB), 8spp",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_p=0.8_RGB.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_p=0.99_RGB.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Var_RGB.exr"
+					},
+					{
+						"title": "(Denoise per 1 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Contrib_RGB.exr"
+					},
+					{
+						"title": "1 Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Var_RGB.exr"
+					},
+					{
+						"title": "1 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_RelVar_RGB.exr"
+					},
+					{
+						"title": "(Denoise per 2 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_Contrib_RGB.exr"
+					},
+					{
+						"title": "2 Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_Var_RGB.exr"
+					},
+					{
+						"title": "2 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_RelVar_RGB.exr"
+					}
+				],
+			},
+			{
+				"title": "5: Hetero (Vol Scatter Prob)",
+				"children": [
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_p=0.8_VSP.exr"
+					},
+					{
+						"title": "P = 0.99",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_p=0.99_VSP.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Var_VSP.exr"
+					},
+					{
+						"title": "(Denoise per 1 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Contrib_VSP.exr"
+					},
+					{
+						"title": "1 Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_Var_VSP.exr"
+					},
+					{
+						"title": "1 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_8spp_1intv_RelVar_VSP.exr"
+					},
+					{
+						"title": "(Denoise per 2 iter) Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_Contrib_VSP.exr"
+					},
+					{
+						"title": "2 Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_Var_VSP.exr"
+					},
+					{
+						"title": "2 Relative Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_8spp_2intv_RelVar_VSP.exr"
+					}
+				]
+			},
+			{
+				"title": "6: Naive, 64spp",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_natural_RelVolVar.exr"
+					}
+				]
+			},
+			{
+				"title": "6: Contribution, 64spp, 1iter",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_RGB.exr"
+					},
+					{
+						"title": "Volume Scatter Prob",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_VolScatterProb.exr"
+					},
+					{
+						"title": "Direct Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_DirectContrib.exr"
+					},
+					{
+						"title": "Surface Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_SurfContrib.exr"
+					},
+					{
+						"title": "Volume Contribution",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_VolContrib.exr"
+					},
+					{
+						"title": "Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_Var.exr"
+					},
+					{
+						"title": "Surface Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_SurfVar.exr"
+					},
+					{
+						"title": "Volume Variance",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_VolVar.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_RelVar.exr"
+					},
+					{
+						"title": "Relative Surface Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_RelSurfVar.exr"
+					},
+					{
+						"title": "Relative Volume Var",
+						"image": "/images/thesis/week6/forceScatterHetero/gbuffer-force-scattering-hetero-bunny-surface_natrual_64spp_1intv_Contrib_RelVolVar.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
