@@ -1,0 +1,210 @@
+---
+title: "Week 7"
+excerpt: "Decrease Scatter Probability <br/><img src='/images/thesis/weekweek7/landscape/llandscape_moonlit.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Decrease Scatter Prob (Homo), 64spp",
+				"children": [
+					{
+						"title": "Naive (256spp)",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin-256spp-d50.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_original.exr"
+					},
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.8.exr"
+					},
+					{
+						"title": "P = 0.8 (Dec)",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.8_dec.exr"
+					},
+					{
+						"title": "P = 0.3 (Dec)",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.3_dec.exr"
+					},
+					{
+						"title": "Contrib",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Contrib.exr"
+					},
+					{
+						"title": "Contrib (Dec), start at 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Contrib_dec.exr"
+					},
+					{
+						"title": "Var (Dec), 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Var_dec.exr"
+					},
+					{
+						"title": "Relative Var (Dec), 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_RelVar_dec.exr"
+					},
+					{
+						"title": "Contrib (Dec), start at 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_Contrib_dec.exr"
+					},
+					{
+						"title": "Var (Dec), 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_Var_dec.exr"
+					},
+					{
+						"title": "Relative Var (Dec), 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_RelVar_dec.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Prob 1",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_original_VSP.exr"
+					},
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.8_VSP.exr"
+					},
+					{
+						"title": "P = 0.8 (Dec)",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.8_dec_VSP.exr"
+					},
+					{
+						"title": "P = 0.3 (Dec)",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_p=0.3_dec_VSP.exr"
+					},
+					{
+						"title": "Contrib",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Contrib_VSP.exr"
+					},
+					{
+						"title": "Contrib (Dec), start at 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Contrib_dec_VSP.exr"
+					},
+					{
+						"title": "Var (Dec), 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_Var_dec_VSP.exr"
+					},
+					{
+						"title": "Relative Var (Dec), 1spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_1intv_RelVar_dec_VSP.exr"
+					},
+					{
+						"title": "Contrib (Dec), start at 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_Contrib_dec_VSP.exr"
+					},
+					{
+						"title": "Var (Dec), 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_Var_dec_VSP.exr"
+					},
+					{
+						"title": "Relative Var (Dec), 8spp",
+						"image": "/images/thesis/week7/forceScatterDecrease/gbuffer-force-scatter-homo-surfDomin_64spp_8intv_RelVar_dec_VSP.exr"
+					}
+				]
+			},
+			{
+				"title": "Landscape, 64spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_original.exr"
+					},
+					{
+						"title": "Equiangular",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_equi.exr"
+					},
+					{
+						"title": "Equiangular MIS",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_equiMIS.exr"
+					},
+					{
+						"title": "P = 0.8 (All later columns are with Dec)",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_p=0.8_dec.exr"
+					},
+					{
+						"title": "P = 0.3",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_p=0.3_dec.exr"
+					},
+					{
+						"title": "Contrib",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_Contrib_dec.exr"
+					},
+					{
+						"title": "Var",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_Var_dec.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_RelVar_dec.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Prob 2",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_original_VSP.exr"
+					},
+					{
+						"title": "P = 0.8",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_p=0.8_dec_VSP.exr"
+					},
+					{
+						"title": "P = 0.3",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_p=0.3_dec_VSP.exr"
+					},
+					{
+						"title": "Contrib",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_Contrib_dec_VSP.exr"
+					},
+					{
+						"title": "Var",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_Var_dec_VSP.exr"
+					},
+					{
+						"title": "Relative Var",
+						"image": "/images/thesis/week7/landscape/achromatic_landscape_64spp_1intv_RelVar_dec_VSP.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
