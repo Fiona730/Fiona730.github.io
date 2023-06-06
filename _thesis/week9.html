@@ -1,6 +1,6 @@
 ---
 title: "Week 9"
-excerpt: "Combine Force Scattering and Equiangular <br/><img src='/images/thesis/week7/landscape/achromatic_landscape_64spp_equiMIS.png' style='height: 400px;'>"
+excerpt: "Combine Force Scattering and Equiangular into One <br/><img src='/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_MIS0.5_1intv.png' style='height: 400px;'>"
 collection: thesis
 ---
 
@@ -34,7 +34,152 @@ collection: thesis
 		"title": "root",
 		"children": [
 			{
-				"title": "Landscape, 64spp, PassSecond",
+				"title": "Force Scatter Decrease, Homogeneous, 64spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_original.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_MIS0.5_1intv.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Probability",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_original_VSP.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_1intv_VSP.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_MIS0.9_1intv_VSP.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-homo-surfDominant-improved_64spp_FPS_dec_forceContrib_MIS0.5_1intv_VSP.exr"
+					}
+				]
+			},
+			{
+				"title": "Heterogeneous",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_original.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_MIS0.5_1intv.exr"
+					}
+				]
+			},
+			{
+				"title": "Scatter Probability",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_original_VSP.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_1intv_VSP.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_MIS0.9_1intv_VSP.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterDecrease/d2_gbuffer-force-scatter-hetero-surfDominant_64spp_FPS_dec_forceContrib_MIS0.5_1intv_VSP.exr"
+					}
+				]
+			},
+			{
+				"title": "Simple Hetero Volume, 64spp, Force Pass Secondary Rays",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_original.exr"
+					},
+					{
+						"title": "Equiangular",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_equiangular.exr"
+					},
+					{
+						"title": "Equiangular MIS",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_equiMIS.exr"
+					},
+					{
+						"title": "Variance Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceVar_1intv.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_MIS0.5_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_equiMIS_forceContrib_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution, MIS0.9",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_equiMIS_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution, MIS0.5",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_equiMIS_forceContrib_MIS0.5_1intv.exr"
+					},
+					{
+						"title": "(Supp) Contrib Vol Var",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_1intv_volvar.exr"
+					},
+					{
+						"title": "+ 0.5 MIS",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_MIS0.5_1intv_volvar.exr"
+					},
+					{
+						"title": "Original VSP",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_original_VSP.exr"
+					},
+					{
+						"title": "Contrib VSP",
+						"image": "/images/thesis/week9/forceScatterSurf/d2_gbuffer-force-scattering-hetero-cloud-surf_64spp_FPS_dec_forceContrib_1intv_VSP.exr"
+					},
+				]
+			},
+			{
+				"title": "Landscape, Small Volume",
 				"children": [
 					{
 						"title": "Naive",
@@ -76,6 +221,88 @@ collection: thesis
 						"title": "EquiMIS + Contribution, MIS0.5",
 						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-equiMIS-forceContribDec-0.5MIS.exr"
 					}
+				]
+			},
+			{
+				"title": "Landscape, Large Volume",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_original.exr"
+					},
+					{
+						"title": "Equiangular",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_equiangular.exr"
+					},
+					{
+						"title": "Equiangular MIS",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_equiMIS.exr"
+					},
+					{
+						"title": "Variance Ratio Guiding",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_forceVar_1intv.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_forceContrib_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_forceContrib_MIS0.5_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_equiMIS_forceContrib_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution, MIS0.9",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_equiMIS_forceContrib_MIS0.9_1intv.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution, MIS0.5",
+						"image": "/images/thesis/week9/landscape/wider_d50_landscape_64spp_FPS_dec_equiMIS_forceContrib_MIS0.5_1intv.exr"
+					}
+				]
+			},
+			{
+				"title": "Museum, 512spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_original.exr"
+					},
+					{
+						"title": "Equiangular MIS",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_equiMIS.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_dec_forceContrib_1intv.exr"
+					},
+					{
+						"title": "Volume Contribution: Naive",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_original_vol.exr"
+					},
+					{
+						"title": "Equi",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_equiMIS_vol.exr"
+					},
+					{
+						"title": "Contrib Guiding",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_dec_forceContrib_1intv_vol.exr"
+					},
+					{
+						"title": "Volume Scatter Prob: Naive",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_original_VSP.exr"
+					},
+					{
+						"title": "Contrib",
+						"image": "/images/thesis/week9/museum/d50_museum_512spp_FPS_dec_forceContrib_1intv_VSP.exr"
+					},
 				]
 			}
 		]
