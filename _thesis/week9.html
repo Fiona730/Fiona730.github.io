@@ -1,0 +1,83 @@
+---
+title: "Week 9"
+excerpt: "Combine Force Scattering and Equiangular <br/><img src='/images/thesis/week7/landscape/achromatic_landscape_64spp_equiMIS.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Landscape, 64spp, PassSecond",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-ori.exr"
+					},
+					{
+						"title": "Equiangular",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-equiOnly.exr"
+					},
+					{
+						"title": "Equiangular MIS",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-equiMIS.exr"
+					},
+					{
+						"title": "Variance Ratio Guiding",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-forceVarDec.exr"
+					},
+					{
+						"title": "Contribution Ratio Guiding",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-forceContribDec.exr"
+					},
+					{
+						"title": "Contribution, MIS0.9",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-forceContribDec-0.9MIS.exr"
+					},
+					{
+						"title": "Contribution, MIS0.5",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-forceContribDec-0.5MIS.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-equiMIS-forceContribDec.exr"
+					},
+					{
+						"title": "EquiMIS + Contribution, MIS0.9",
+						"image": "/images/thesis/week9/landscape/achromatic-landscape-64spp-passSecond-equiMIS-forceContribDec-0.9MIS.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
