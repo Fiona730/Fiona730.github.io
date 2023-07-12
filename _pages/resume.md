@@ -8,7 +8,6 @@ author_profile: true
 Education
 ------
 - **2021.9 ~ Present: Master of Science in Computer Science, [ETH Zurich](https://inf.ethz.ch)**
-    - Expected graduation 2023.11
     - GPA: 5.89 / 6.0
     - Selected Courses: Computer Graphics (6.0), Shape Modeling and Geometry Processing (6.0), Advanced Systems Lab (6.0), Algorithms Lab (6.0), Probabilistic Artificial Intelligence (6.0)
 - **2016.9 ~ 2020.6: Bachelor of Science in Computer Science and Technology, [Peking University](https://english.pku.edu.cn)**

@@ -1,0 +1,146 @@
+---
+title: "Week 14"
+excerpt: "Tr Scaling Darkening Issue and Guiding with OpenPGL <br/><img src='/images/thesis/week11/newAlg/gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight-8spp-d2-sig0.5-g0.8-guidingVarDecAll.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Tr-scaling vs Prob. Select, Surface + Cloud, 8spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-gt.exr"
+					},
+					{
+						"title": "Tr-cutoff",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrContrib.exr"
+					},
+					{
+						"title": "Prob Select",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrDecrContrib-ProbSelect.exr"
+					},
+					{
+						"title": "Tr scaling",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrDecrContrib-trScaling.exr"
+					},
+					{
+						"title": "Prob Select + Tr scaling",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrDecrContrib-testCombineTr2way0.95_0.2.exr"
+					}
+				]
+			},
+			{
+				"title": "Contribution Guiding Fireflies, Surface + Cloud, 8spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-gt.exr"
+					},
+					{
+						"title": "Tr-cutoff",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrContrib.exr"
+					},
+					{
+						"title": "Prob Select",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrDecrContrib-ProbSelect.exr"
+					},
+					{
+						"title": "Prob Select + GT Contribution Guiding",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceDecContrib-gt4096spp.exr"
+					},
+					{
+						"title": "Prob Select Variance",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceIncrDecrContrib-ProbSelect_volVar.exr"
+					},
+					{
+						"title": "Prob Select + GT Variance",
+						"image": "/images/thesis/week14/ScatterProbDecrease/gbuffer-force-scattering-hetero-cloud-surf-d2-8spp-forceDecContrib-gt4096spp_volVar.exr"
+					}
+				]
+			},
+			{
+				"title": "OpenPGL Guiding Comparison, Surface + Cloud, 8spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scattering-hetero-cloud-surf_d50_spp8_naive.exr"
+					},
+					{
+						"title": "Primary Ray",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scattering-hetero-cloud-surf_d50_spp8_dec_primaryContrib_1intv.exr"
+					},
+					{
+						"title": "All Rays",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scattering-hetero-cloud-surf_d50_spp8_dec_allRayContrib_1intv.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scattering-hetero-cloud-surf_d50_spp8_guideDir.exr"
+					},
+					{
+						"title": "Directional Guiding + All Rays",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scattering-hetero-cloud-surf_d50_spp8_dec_allRayContrib_guideDir_1intv.exr"
+					}
+				]
+			},
+			{
+				"title": "Spotlight from Back, 8spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight_d50_spp8_naive.exr"
+					},
+					{
+						"title": "Primary Ray",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight_d50_spp8_dec_primaryContrib_1intv.exr"
+					},
+					{
+						"title": "All Rays",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight_d50_spp8_dec_allRayContrib_1intv.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight_d50_spp8_guideDir.exr"
+					},
+					{
+						"title": "Directional Guiding + All Rays",
+						"image": "/images/thesis/week14/OpenPGL/guidedvolpath-gbuffer-force-scatter-hetero-surfDominant-smallerSpotlight_d50_spp8_dec_allRayContrib_guideDir_1intv.exr"
+					}
+				]
+			}
+		]
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
