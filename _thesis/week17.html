@@ -1,0 +1,466 @@
+---
+title: "Week 17"
+excerpt: "Directional and Scatter Guiding Experiments on Large-scale Scenes <br/><img src='/images/thesis/week17/290skydemo/290skydemo_guideDir_reference_145408spp.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "CoronaBenchmark, 2048spp",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_naive_spp2048.exr"
+					},
+					{
+						"title": "SMAPE: 0.388",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_naive_spp2048.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Primary Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_primaryContrib_spp2048.exr"
+					},
+					{
+						"title": "SMAPE: 0.320",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_primaryContrib_spp2048.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "SMAPE: 0.318",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_allRayContrib_spp2048.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_guideDir_spp2048.exr"
+					},
+					{
+						"title": "SMAPE: 0.263",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_guideDir_spp2048.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_allRayContrib_guideDir_spp2048.exr"
+					},
+					{
+						"title": "SMAPE: 0.176",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/week17/CoronaBenchmark2/RGB_CoronaBenchmark2_allRayContrib_guideDir_spp2048.exr"
+						},
+						"tonemapGroup": 1
+					},
+				]
+			},
+			{
+				"title": "CoronaBenchmark, g=-0.6",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/CoronaBenchmark2-g-0.6/RGB_CoronaBenchmark2-g-0.6_naive_spp2048.exr"
+					},
+					{
+						"title": "Primary Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2-g-0.6/RGB_CoronaBenchmark2-g-0.6_primaryContrib_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2-g-0.6/RGB_CoronaBenchmark2-g-0.6_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/CoronaBenchmark2-g-0.6/RGB_CoronaBenchmark2-g-0.6_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/CoronaBenchmark2-g-0.6/RGB_CoronaBenchmark2-g-0.6_allRayContrib_guideDir_spp2048.exr"
+					}
+				]
+			},
+			{
+				"title": "Underwater, 4096spp",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week17/290skydemo/290skydemo_guideDir_reference_145408spp.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/290skydemo/RGB_290skydemo_naive_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 1.287",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo/290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo/RGB_290skydemo_naive_spp4096.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/290skydemo/RGB_290skydemo_guideDir_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 0.225",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo/290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo/RGB_290skydemo_guideDir_spp4096.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/290skydemo/RGB_290skydemo_allRayContrib_guideDir_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 0.218",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo/290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo/RGB_290skydemo_allRayContrib_guideDir_spp4096.exr"
+						},
+						"tonemapGroup": 2
+					},
+				]
+			},
+			{
+				"title": "Underwater, g=-0.8",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/RGB_290skydemo-g-0.8_naive_spp4096.exr"
+					},
+					{
+						"title": "Var 1",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/Var_290skydemo-g-0.8_naive_spp4096.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/RGB_290skydemo-g-0.8_guideDir_spp4096.exr"
+					},
+					{
+						"title": "Var 2",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/Var_290skydemo-g-0.8_guideDir_spp4096.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/RGB_290skydemo-g-0.8_allRayContrib_guideDir_spp4096.exr"
+					},
+					{
+						"title": "Var 3",
+						"image": "/images/thesis/week17/290skydemo-g-0.8/Var_290skydemo-g-0.8_allRayContrib_guideDir_spp4096.exr"
+					},
+				]
+			},
+			{
+				"title": "Underwater, thinner medium",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week17/290skydemo-scale0.01/290skydemo-scale0.01_guideDir_reference_136960spp.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_naive_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 1.196",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo-scale0.01/290skydemo-scale0.01_guideDir_reference_136960spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_naive_spp4096.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_guideDir_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 0.141",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo-scale0.01/290skydemo-scale0.01_guideDir_reference_136960spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_guideDir_spp4096.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_allRayContrib_guideDir_spp4096.exr"
+					},
+					{
+						"title": "SMAPE: 0.144",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/290skydemo-scale0.01/290skydemo-scale0.01_guideDir_reference_136960spp.exr",
+							"imageB": "/images/thesis/week17/290skydemo-scale0.01/RGB_290skydemo-scale0.01_allRayContrib_guideDir_spp4096.exr"
+						},
+						"tonemapGroup": 3
+					},
+				]
+			},
+			{
+				"title": "Infinite Scan Head, 2048spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/InfiniteScanHead/RGB_InfiniteScanHead_naive_spp2048.exr"
+					},
+					{
+						"title": "Var 1",
+						"image": "/images/thesis/week17/InfiniteScanHead/Var_InfiniteScanHead_naive_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/InfiniteScanHead/RGB_InfiniteScanHead_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Var 2",
+						"image": "/images/thesis/week17/InfiniteScanHead/Var_InfiniteScanHead_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/InfiniteScanHead/RGB_InfiniteScanHead_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Var 3",
+						"image": "/images/thesis/week17/InfiniteScanHead/Var_InfiniteScanHead_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/InfiniteScanHead/RGB_InfiniteScanHead_allRayContrib_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Var 4",
+						"image": "/images/thesis/week17/InfiniteScanHead/Var_InfiniteScanHead_allRayContrib_guideDir_spp2048.exr"
+					},
+				]
+			},
+			{
+				"title": "Lavalamp, 2048spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/Lavalamp/RGB_lavalamp_naive_spp2048.exr"
+					},
+					{
+						"title": "Primary Scatter",
+						"image": "/images/thesis/week17/Lavalamp/RGB_lavalamp_primaryContrib_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/Lavalamp/RGB_lavalamp_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/Lavalamp/RGB_lavalamp_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/Lavalamp/RGB_lavalamp_allRayContrib_guideDir_spp2048.exr"
+					}
+				]
+			},
+			{
+				"title": "LavalampDielectric",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/LavalampDielectric/RGB_lavalamp-lavaDielectric_naive_spp2048.exr"
+					},
+					{
+						"title": "Primary Scatter",
+						"image": "/images/thesis/week17/LavalampDielectric/RGB_lavalamp-lavaDielectric_primaryContrib_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/LavalampDielectric/RGB_lavalamp-lavaDielectric_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/LavalampDielectric/RGB_lavalamp-lavaDielectric_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/LavalampDielectric/RGB_lavalamp-lavaDielectric_allRayContrib_guideDir_spp2048.exr"
+					}
+				]
+			},
+			{
+				"title": "LavalampDense",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/LavalampDense/RGB_lavalamp-dense_naive_spp2048.exr"
+					},
+					{
+						"title": "Primary Scatter",
+						"image": "/images/thesis/week17/LavalampDense/RGB_lavalamp-dense_primaryContrib_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/LavalampDense/RGB_lavalamp-dense_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/LavalampDense/RGB_lavalamp-dense_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/LavalampDense/RGB_lavalamp-dense_allRayContrib_guideDir_spp2048.exr"
+					},
+					{
+						"title": "VSP Naive",
+						"image": "/images/thesis/week17/LavalampDense/VolScatterProb_lavalamp-dense_naive_spp2048.exr"
+					},
+					{
+						"title": "VSP Primary Scatter",
+						"image": "/images/thesis/week17/LavalampDense/VolScatterProb_lavalamp-dense_primaryContrib_spp2048.exr"
+					},
+				]
+			},
+			{
+				"title": "Musuem, light shaft, 1024spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/museum/RGB_museum_naive_spp1024.exr"
+					},
+					{
+						"title": "Var 1",
+						"image": "/images/thesis/week17/museum/Var_museum_naive_spp1024.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/museum/RGB_museum_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Var 2",
+						"image": "/images/thesis/week17/museum/Var_museum_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/museum/RGB_museum_allRayContrib_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Var 3",
+						"image": "/images/thesis/week17/museum/Var_museum_allRayContrib_guideDir_spp1024.exr"
+					}
+				]
+			},
+			{
+				"title": "Musuem, envmap",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/museum-envmap/RGB_museum-envmap_naive_spp1024.exr"
+					},
+					{
+						"title": "Var 1",
+						"image": "/images/thesis/week17/museum-envmap/Var_museum-envmap_naive_spp1024.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/museum-envmap/RGB_museum-envmap_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Var 2",
+						"image": "/images/thesis/week17/museum-envmap/Var_museum-envmap_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/museum-envmap/RGB_museum-envmap_allRayContrib_guideDir_spp1024.exr"
+					},
+					{
+						"title": "Var 3",
+						"image": "/images/thesis/week17/museum-envmap/Var_museum-envmap_allRayContrib_guideDir_spp1024.exr"
+					}
+				]
+			},
+			{
+				"title": "Cbox-godrays, 2048spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week17/cbox-godrays/RGB_cbox-godrays_naive_spp2048.exr"
+					},
+					{
+						"title": "Full Scatter",
+						"image": "/images/thesis/week17/cbox-godrays/RGB_cbox-godrays_allRayContrib_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week17/cbox-godrays/RGB_cbox-godrays_guideDir_spp2048.exr"
+					},
+					{
+						"title": "Directional Guiding + Full Scatter",
+						"image": "/images/thesis/week17/cbox-godrays/RGB_cbox-godrays_allRayContrib_guideDir_spp2048.exr"
+					}
+				]
+			},
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
