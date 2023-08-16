@@ -1,0 +1,170 @@
+---
+title: "Week 19"
+excerpt: "Scatter Guiding Experiments Misc (Cont.) <br/><img src='/images/thesis/week18/lavalamp/RGB_lavalamp-dense-naive-64spp-0.5mis--IncrDecr.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Underwater, Secondary Ray Scatter Guiding, 64spp",
+				"children": [
+					{
+						"title": "Directional Guiding Alone",
+						"image": "/images/thesis/week18/underwater/secondary/RGB_290skydemo-guideDir-64spp.exr"
+					},
+					{
+						"title": "+ Secondary Ray, High Variance",
+						"image": "/images/thesis/week19/Underwater/RGB_290skydemo-64spp-IncrDecr-mis1-guideDir+secondary-testFireflies-no0.99Bound-decrFullScaling.exr"
+					},
+					{
+						"title": "Clamp High Natural Scatter",
+						"image": "/images/thesis/week19/Underwater/RGB_290skydemo-64spp-IncrDecr-mis1-guideDir+secondary-testFireflies-0.99Bound-decrFullScaling.exr"
+					},
+					{
+						"title": "Fix Chromatic Precision Problem",
+						"image": "/images/thesis/week19/Underwater/RGB_290skydemo-mine-64spp-guideDir+secondary-1mis-fixPrecision.exr"
+					},
+					{
+						"title": "Fix Guiding Weights, 1 mis",
+						"image": "/images/thesis/week19/Underwater/RGB_290skydemo-64spp-guideDir+secondary-1mis-chromatic-incrCutoffDecrScaling-fixedTrWeight-noBound0.999.exr"
+					},
+					{
+						"title": "0.5 mis",
+						"image": "/images/thesis/week19/Underwater/RGB_290skydemo-64spp-guideDir+secondary-0.5mis-chromatic-incrCutoffDecrScaling-fixedTrWeight-noBound0.999.exr"
+					},
+				]
+			},
+			{
+				"title": "InfiniteScanHead, eta=1.05, 256spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/RGB_InfiniteScanHead-eta1.05-naive-256spp.exr"
+					},
+					{
+						"title": "Secondary Ray, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/RGB_InfiniteScanHead-eta1.05-secondaryContrib_1mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "0.5 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/RGB_InfiniteScanHead-eta1.05-secondaryContrib_0.5mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "Load Guiding Field (4096spp), 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-secondary-load4096spp-eta1.05.exr"
+					},
+					{
+						"title": "Load, 0.5 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/RGB_InfiniteScanHead-256spp-0.5mis-chromatic-incrCutoffDecrScaling-secondary-load4096spp-eta1.05.exr"
+					},
+					{
+						"title": "Directional",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-eta1.05-guideDir-256spp.exr"
+					},
+					{
+						"title": "Directional, Load",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-guideDir-load4096spp-eta1.05.exr"
+					},
+					{
+						"title": "Directional + Secondary Ray, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-eta1.05-secondaryRayContrib_guideDir_1mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "0.5 mis (2)",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-eta1.05-secondaryRayContrib_guideDir_0.5mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "Load, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-guideDir+secondary-load4096spp-eta1.05.exr"
+					},
+					{
+						"title": "Load, 0.5 mis (2)",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.05/guideDir/RGB_InfiniteScanHead-256spp-0.5mis-chromatic-incrCutoffDecrScaling-guideDir+secondary-load4096spp-eta1.05.exr"
+					},
+				]
+			},
+			{
+				"title": "eta=1.35",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/RGB_InfiniteScanHead-naive-256spp.exr"
+					},
+					{
+						"title": "Secondary Ray, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/RGB_InfiniteScanHead-secondaryContrib_1mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "0.5 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/RGB_InfiniteScanHead-secondaryContrib_0.5mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "Load Guiding Field (4096spp), 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-secondary-load4096spp.exr"
+					},
+					{
+						"title": "Load, 0.5 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/RGB_InfiniteScanHead-256spp-0.5mis-chromatic-incrCutoffDecrScaling-secondary-load4096spp.exr"
+					},
+					{
+						"title": "Directional",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-guideDir-256spp.exr"
+					},
+					{
+						"title": "Directional, Load",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-guideDir-load4096spp.exr"
+					},
+					{
+						"title": "Directional + Secondary Ray, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-secondaryRayContrib_guideDir_1mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "0.5 mis (2)",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-secondaryRayContrib_guideDir_0.5mis-256spp-IncrCutoffDecrScaling.exr"
+					},
+					{
+						"title": "Load, 1 mis",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-256spp-1mis-chromatic-incrCutoffDecrScaling-guideDir+secondary-load4096spp.exr"
+					},
+					{
+						"title": "Load, 0.5 mis (2)",
+						"image": "/images/thesis/week19/InfiniteScanHead/eta1.35/guideDir/RGB_InfiniteScanHead-256spp-0.5mis-chromatic-incrCutoffDecrScaling-guideDir+secondary-load4096spp.exr"
+					},
+				]
+			},
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
