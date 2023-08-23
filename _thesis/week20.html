@@ -1,0 +1,108 @@
+---
+title: "Week 20"
+excerpt: "Underwater Result"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Underwater, Secondary Ray Scatter Guiding, 1024spp",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_reference_145408spp.exr"
+					},
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_naive_spp1024_.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_spp1024_.exr"
+					},
+					{
+						"title": "2.91E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_spp1024_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Dir + Primary Ray Guiding, 0.5 mis",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_primaryRayContrib_0.5mis_guideDir_spp1024_.exr"
+					},
+					{
+						"title": "2.85E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week20/underwater/RGB_290skydemo_primaryRayContrib_0.5mis_guideDir_spp1024_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Dir + Secondary Ray Guiding, 0.5 mis",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_secondaryRayContrib_0.5mis_guideDir_spp1024_.exr"
+					},
+					{
+						"title": "2.55E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week20/underwater/RGB_290skydemo_secondaryRayContrib_0.5mis_guideDir_spp1024_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Dir + Full Ray Guiding, 0.5 mis",
+						"image": "/images/thesis/week20/underwater/RGB_290skydemo_allRayContrib_0.5mis_guideDir_spp1024_.exr"
+					},
+					{
+						"title": "2.31E-1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week20/underwater/RGB_290skydemo_guideDir_reference_145408spp.exr",
+							"imageB": "/images/thesis/week20/underwater/RGB_290skydemo_allRayContrib_0.5mis_guideDir_spp1024_.exr"
+						},
+						"tonemapGroup": 2
+					},
+				]
+			},
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
