@@ -1,0 +1,347 @@
+---
+title: "Week 24"
+excerpt: "Heterogeneous Volume Force Scattering Experiment <br/><img src='/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Volumetric Cube",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (1)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff Smooth",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_cutoff_smooth-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (2)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_cutoff_smooth-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollison",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (3)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_scaling-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (4)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling Smooth",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_scaling_smooth-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (5)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_smooth-64spp.exr"
+					},
+					{
+						"title": "Scaling AdjustOnce",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_adjustOnce-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (6)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_adjustOnce-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (7)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "ProbSelect",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_1mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (8)",
+						"image": "/images/thesis/week24/cube/RGB_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (1)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff Smooth",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_cutoff_smooth-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (2)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_cutoff_smooth-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollison",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (3)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_scaling-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (4)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling Smooth",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_scaling_smooth-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (5)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_smooth-64spp.exr"
+					},
+					{
+						"title": "Scaling AdjustOnce",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_adjustOnce-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (6)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_adjustOnce-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (7)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "ProbSelect",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_1mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "0.5 MIS (8)",
+						"image": "/images/thesis/week24/cube/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Smoke Plume, Thin",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/RGB_smoke-plume-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/RGB_smoke-plume-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/RGB_smoke-plume-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/RGB_smoke-plume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/RGB_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (2)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/VolScatterProb_smoke-plume-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/VolScatterProb_smoke-plume-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/VolScatterProb_smoke-plume-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/VolScatterProb_smoke-plume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.01-g0/VolScatterProb_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Smoke Plume, Thick",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-1.exr"
+					},
+					{
+						"title": "Scaling NullCollision (Improved), 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/RGB_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-2.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (3)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Cutoff NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-primaryContrib_0.5mis_cutoff_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollision, 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-1.exr"
+					},
+					{
+						"title": "Scaling NullCollision (Improved), 0.5 MIS",
+						"image": "/images/thesis/week24/smoke-plume/scale0.05-g-0.8/VolScatterProb_smoke-plume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-2.exr"
+					},
+				]
+			},
+			{
+				"title": "Living Room, Hetero Volume, 1024spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/living-room/RGB_CoronaBenchmark2_naive_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Primary Ray Guiding (Scaling NullCollision, 0.5MIS)",
+						"image": "/images/thesis/week24/living-room/RGB_CoronaBenchmark2_primaryContrib_0.5mis_scaling_nullCollBias_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week24/living-room/RGB_CoronaBenchmark2_guideDir_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Dir + Primary Ray Guiding",
+						"image": "/images/thesis/week24/living-room/RGB_CoronaBenchmark2_primaryRayContrib_0.5mis_guideDir_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Dir + All Ray Guiding",
+						"image": "/images/thesis/week24/living-room/RGB_CoronaBenchmark2_allRayContrib_0.5mis_guideDir_spp1024_seed0_Hetero.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (4)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week24/living-room/VolScatterProb_CoronaBenchmark2_naive_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Primary Ray Guiding (Scaling NullCollision, 0.5MIS)",
+						"image": "/images/thesis/week24/living-room/VolScatterProb_CoronaBenchmark2_primaryContrib_0.5mis_scaling_nullCollBias_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Directional Guiding",
+						"image": "/images/thesis/week24/living-room/VolScatterProb_CoronaBenchmark2_guideDir_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Dir + Primary Ray Guiding",
+						"image": "/images/thesis/week24/living-room/VolScatterProb_CoronaBenchmark2_primaryRayContrib_0.5mis_guideDir_spp1024_seed0_Hetero.exr"
+					},
+					{
+						"title": "Dir + All Ray Guiding",
+						"image": "/images/thesis/week24/living-room/VolScatterProb_CoronaBenchmark2_allRayContrib_0.5mis_guideDir_spp1024_seed0_Hetero.exr"
+					}
+				]
+			}
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
