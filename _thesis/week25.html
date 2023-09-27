@@ -1,0 +1,293 @@
+---
+title: "Week 25"
+excerpt: "Heterogeneous Volume Force Scattering Experiment<br/><img src='/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-naive-64spp.png' style='height: 400px;'>"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Volumetric Cube, Empty Interval",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Scaling 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/RGB_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability",
+				"children": [
+				{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Scaling 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cube/twoSided/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volumetric Cube, Turbulent",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Scaling 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/RGB_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (2)",
+				"children": [
+				{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-naive-64spp.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_cutoff-64spp.exr"
+					},
+					{
+						"title": "Scaling 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cube/turbulent/VolScatterProb_volume-cube-test-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Cornell Box, Cloud, Density Scale 1",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (3)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/VolScatterProb_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density1/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Cloud, Density Scale 3",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (4)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/VolScatterProb_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp-GTPDF.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/cloud/density3/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Bunny, Density Scale 3",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS (10 Run Est)",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-bunny-scalingNullColl-0.5MIS-64spp-EstTr10Run.exr"
+					},
+					{
+						"title": "(1 Run Est)",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-bunny-scalingNullColl-0.5MIS-64spp-EstTr1Run.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Volume Scatter Probability (5)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/VolScatterProb_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison GTPDF 0.5 MIS (10 Run Est)",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/VolScatterProb_cornell-box-volume-bunny-scalingNullColl-0.5MIS-64spp-EstTr10Run.exr"
+					},
+					{
+						"title": "(1 Run Est)",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/VolScatterProb_cornell-box-volume-bunny-scalingNullColl-0.5MIS-64spp-EstTr1Run.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week25/cornell-box/bunny/density3/VolScatterProb_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+				]
+			}
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
