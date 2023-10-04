@@ -1,0 +1,479 @@
+---
+title: "Week 26"
+excerpt: "Heterogeneous Volume Force Scattering Experiment"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Cornell Box + Cloud, Front Light, Maj=1",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Maj=5",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Back Light, Maj=1",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Maj=5(2)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-naive-64spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Area Light, Sigma S=1",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-naive-8spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-8spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Sigma S/A=0.2/0.8",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-naive-8spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-8spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Dining Room",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_naive_spp64_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS (Primary Contrib)",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Primary Var",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Secondary Contrib",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "All Contrib",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Smoke Plume",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_naive_spp64_seed0_.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
+					},
+					{
+						"title": "Smooth",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_smooth_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+					},
+					{
+						"title": "ProbSelect",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+					},
+					{
+						"title": "Scaling",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "Smooth(2)",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
+					},
+					{
+						"title": "AdjustOnce C1/C2",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Tr",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Tr (Primary Contrib)",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Primary Var",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Secondary Contrib",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "All Contrib",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir+All Contrib",
+						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Stairs",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_naive_spp64_seed0_.exr"
+					},
+					{
+						"title": "Cutoff 0.5 MIS",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
+					},
+					{
+						"title": "Smooth",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_smooth_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+					},
+					{
+						"title": "ProbSelect",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+					},
+					{
+						"title": "Scaling",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "Smooth(2)",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
+					},
+					{
+						"title": "AdjustOnce C1/C2",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Tr",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Tr (Primary Contrib)",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Primary Var",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Secondary Contrib",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "All Contrib",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir+All Contrib",
+						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Lamp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-naive-8spp.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling 0.5 MIS",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling-8spp.exr"
+					},
+					{
+						"title": "ProbSelect 0.5 MIS",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_probSelect-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+					},
+					{
+						"title": "Scaling NullCollison Tr 0.5 MIS (Primary Contrib)",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+					{
+						"title": "Primary Var",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryVariance_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+					{
+						"title": "Secondary Contrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-secondaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+					{
+						"title": "All Contrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-allContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-guideDir-8spp.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-allContrib_guideDir_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+					},
+				]
+			},
+			{
+				"title": "Landscape",
+				"children": [
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir+All Contrib",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Cutoff NullColl",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+					},
+					{
+						"title": "ProbSelect",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+					},
+					{
+						"title": "Scaling",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "Tr (Primary Contrib)",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Primary Var",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "Secondary Contrib",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "All Contrib",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Underwater, Achromatic",
+				"children": [
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			}
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
