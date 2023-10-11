@@ -37,49 +37,277 @@ collection: thesis
 				"title": "Cornell Box + Cloud, Front Light, Maj=1",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-naive-64spp.exr"
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+						"title": "(SMAPE) 0.323",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+						"title": "0.312",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
-					}
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.311",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.309",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.308",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.3090",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.323",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.3110",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.244",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.231",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
 				]
 			},
 			{
 				"title": "Maj=5",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-naive-64spp.exr"
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_naive_spp64_seed0_-MajX5.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+						"title": "(SMAPE) 0.312",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_naive_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_probSelect_spp64_seed0_-MajX5.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+						"title": "0.311",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_probSelect_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.319",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.305",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.315",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.300",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.3150",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.302",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.235",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.224",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj5/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 				]
 			},
@@ -87,24 +315,138 @@ collection: thesis
 				"title": "Back Light, Maj=1",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-naive-64spp.exr"
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+						"title": "(SMAPE) 0.654",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+						"title": "0.656",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.660",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.666",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.636",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.638",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.665",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.647",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.358",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.353",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 				]
 			},
@@ -112,24 +454,138 @@ collection: thesis
 				"title": "Maj=5(2)",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-naive-64spp.exr"
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_naive_spp64_seed0_-MajX5.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-64spp.exr"
+						"title": "(SMAPE) 0.655",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_naive_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-64spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_probSelect_spp64_seed0_-MajX5.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+						"title": "0.640",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_probSelect_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.711",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.696",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.638",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.6380",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.673",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.654",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.357",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+					},
+					{
+						"title": "0.364",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj5/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_-MajX5.exr"
+						},
+						"tonemapGroup": 1
 					},
 				]
 			},
@@ -137,24 +593,138 @@ collection: thesis
 				"title": "Area Light, Sigma S=1",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-naive-8spp.exr"
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-8spp.exr"
+						"title": "(SMAPE) 0.232",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-8spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+						"title": "0.235",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.236",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.237",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.233",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.234",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.248",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.249",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.186",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.197",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/cornell-box-volume-disneyScale3Arealight_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS1A0/RGB_cornell-box-volume-disneyScale3Arealight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 				]
 			},
@@ -162,24 +732,138 @@ collection: thesis
 				"title": "Sigma S/A=0.2/0.8",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-naive-8spp.exr"
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling-8spp.exr"
+						"title": "(SMAPE) 0.209",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_probSelect-8spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+						"title": "0.212",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS",
-						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.211",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.219",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.197",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.198",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.206",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.194",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.186",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.172",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_naive_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/cornell-box/arealight/sigmaS0.2A0.8/RGB_cornell-box-volume-disneyScale3ArealightSigmaS0.2A0.8_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 1
 					},
 				]
 			},
@@ -187,44 +871,138 @@ collection: thesis
 				"title": "Dining Room",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						"title": "(SMAPE)0.090",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
+						"title": "Primary Contrib, ProbSelect",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
+						"title": "0.087",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Scal",
+						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.087",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "NullColl C1/C2",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS (Primary Contrib)",
+						"title": "0.084",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "NullColl Tr",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Var",
+						"title": "0.0840",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "PrimaryVar",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Secondary Contrib",
+						"title": "0.08400",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "SecondaryContrib",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "All Contrib",
+						"title": "0.091",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "AllContrib",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir",
+						"title": "0.085",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_guideDir_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir + All Contrib",
+						"title": "0.083",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir+AllContrib",
 						"image": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.077",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/dining-room/dining-room-noWall_naive_reference_66560spp_RGB.exr",
+							"imageB": "/images/thesis/week26/dining-room/RGB_dining-room-noWall_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 				]
 			},
@@ -232,68 +1010,216 @@ collection: thesis
 				"title": "Smoke Plume",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Cutoff 0.5 MIS",
+						"title": "1",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "Cutoff",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
+					},
+					{
+						"title": "2",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
 					},
 					{
 						"title": "Smooth",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_smooth_spp64_seed0_.exr"
 					},
 					{
+						"title": "3",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_smooth_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
 						"title": "NullColl",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+					},
+					{
+						"title": "4",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
 					},
 					{
 						"title": "ProbSelect",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling",
+						"title": "5",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "Scal",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+					},
+					{
+						"title": "6",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
 					},
 					{
 						"title": "Smooth(2)",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
 					},
 					{
+						"title": "7",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
 						"title": "AdjustOnce C1/C2",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "8",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
 					},
 					{
 						"title": "Tr",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
 					},
 					{
+						"title": "9",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
 						"title": "NullColl C1/C2",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
 					},
 					{
-						"title": "Tr (Primary Contrib)",
+						"title": "10",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "Tr(2)",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Var",
+						"title": "11",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "PrimaryVar",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Secondary Contrib",
+						"title": "12",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "SecondContrib",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "All Contrib",
+						"title": "13",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "AllContrib",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir",
+						"title": "14",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "GuideDir",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_guideDir_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir+All Contrib",
+						"title": "15",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
+					},
+					{
+						"title": "GuideDir+AllContrib",
 						"image": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "16",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/smoke-plume/smoke-plume_naive_reference_138112spp_RGB.exr",
+							"imageB": "/images/thesis/week26/smoke-plume/RGB_smoke-plume_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 5
 					},
 				]
 			},
@@ -301,68 +1227,190 @@ collection: thesis
 				"title": "Stairs",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Cutoff 0.5 MIS",
+						"title": "0.181",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Cutoff/Smooth/NullColl",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
 					},
 					{
-						"title": "Smooth",
-						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_smooth_spp64_seed0_.exr"
-					},
-					{
-						"title": "NullColl",
-						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_nullCollBias_spp64_seed0_.exr"
+						"title": "0.1810",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_cutoff_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
 					},
 					{
 						"title": "ProbSelect",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling",
+						"title": "0.177",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Scal",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
 					},
 					{
-						"title": "Smooth(2)",
+						"title": "0.192",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Smooth",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.194",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_smooth_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
 					},
 					{
 						"title": "AdjustOnce C1/C2",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
 					},
 					{
+						"title": "0.1920",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
 						"title": "Tr",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.171",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_adjustOnce_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
 					},
 					{
 						"title": "NullColl C1/C2",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
 					},
 					{
-						"title": "Tr (Primary Contrib)",
+						"title": "0.197",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Tr(2)",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Var",
+						"title": "0.1710",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "PrimaryVar",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Secondary Contrib",
+						"title": "0.173",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "SecondContrib",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "All Contrib",
+						"title": "0.178",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "AllContrib",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir",
+						"title": "0.168",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "GuideDir",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_guideDir_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir+All Contrib",
+						"title": "0.182",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "GuideDir+All",
 						"image": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.1680",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/stairs/staircase2-targetDecr_naive_reference_8960spp_RGB.exr",
+							"imageB": "/images/thesis/week26/stairs/RGB_staircase2-targetDecr_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 4
 					},
 				]
 			},
@@ -370,57 +1418,147 @@ collection: thesis
 				"title": "Lamp",
 				"children": [
 					{
+						"title": "GT",
+						"image": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr"
+					},
+					{
 						"title": "Naive",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-naive-8spp.exr"
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_naive_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Contrib, Scaling 0.5 MIS",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling-8spp.exr"
+						"title": "(SMAPE)0.176",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_naive_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 					{
-						"title": "ProbSelect 0.5 MIS",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_probSelect-8spp.exr"
+						"title": "Primary Contrib, ProbSelect",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
 					},
 					{
-						"title": "Scaling NullCollison C1/C2 0.5 MIS",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-8spp.exr"
+						"title": "0.175",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_probSelect_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 					{
-						"title": "Scaling NullCollison Tr 0.5 MIS (Primary Contrib)",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "Scal",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
 					},
 					{
-						"title": "Primary Var",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-primaryVariance_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "0.180",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 					{
-						"title": "Secondary Contrib",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-secondaryContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "NullColl C1/C2",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
 					},
 					{
-						"title": "All Contrib",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-allContrib_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "0.181",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 					{
-						"title": "Guide Dir",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-guideDir-8spp.exr"
+						"title": "NullColl Tr",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
-						"title": "Guide Dir + All Contrib",
-						"image": "/images/thesis/week26/lamp/RGB_lamp-allContrib_guideDir_0.5mis_scaling_nullCollBias_tr-8spp.exr"
+						"title": "0.171",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "PrimaryVar",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.174",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "SecondaryContrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.1710",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_secondaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "AllContrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.169",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.121",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_guideDir_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir+AllContrib",
+						"image": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "0.115",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/lamp/lamp-dielectricAchromaticSize0.2_naive_reference_65280spp_RGB.exr",
+							"imageB": "/images/thesis/week26/lamp/RGB_lamp-dielectricAchromaticSize0.2_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						},
+						"tonemapGroup": 2
 					},
 				]
 			},
 			{
-				"title": "Landscape",
+				"title": "Landscape 64spp",
 				"children": [
 					{
-						"title": "Guide Dir",
-						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_guideDir_spp64_seed0_.exr"
-					},
-					{
-						"title": "Guide Dir+All Contrib",
-						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+						"title": "Naive",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_naive_spp64_seed0_.exr"
 					},
 					{
 						"title": "Cutoff NullColl",
@@ -439,7 +1577,7 @@ collection: thesis
 						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
 					},
 					{
-						"title": "Tr (Primary Contrib)",
+						"title": "NullColl Tr",
 						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
 					{
@@ -454,18 +1592,74 @@ collection: thesis
 						"title": "All Contrib",
 						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
 					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_guideDir_spp64_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir+All Contrib",
+						"image": "/images/thesis/week26/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
 				]
 			},
 			{
-				"title": "Underwater, Achromatic",
+				"title": "Underwater Achromatic 256spp",
 				"children": [
+				{
+						"title": "GT",
+						"image": "/images/thesis/week26/underwater/290skydemo-hetero-achromatic_guideDir_reference_131072spp_RGB.exr"
+					},
 					{
 						"title": "Guide Dir",
 						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_guideDir_spp256_seed0_.exr"
 					},
 					{
+						"title": "(SMAPE) 0.349",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/underwater/290skydemo-hetero-achromatic_guideDir_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_guideDir_spp256_seed0_.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "(SMAPE) 0.335",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/underwater/290skydemo-hetero-achromatic_guideDir_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Guide Dir + Secondary Contrib",
+						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "(SMAPE) 0.294",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/underwater/290skydemo-hetero-achromatic_guideDir_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
 						"title": "Guide Dir + All Contrib",
 						"image": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "(SMAPE) 0.279",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/underwater/290skydemo-hetero-achromatic_guideDir_reference_131072spp_RGB.exr",
+							"imageB": "/images/thesis/week26/underwater/RGB_290skydemo-hetero-achromatic_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+						},
+						"tonemapGroup": 3
 					},
 				]
 			}
