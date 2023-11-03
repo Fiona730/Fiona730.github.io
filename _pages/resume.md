@@ -8,16 +8,20 @@ author_profile: true
 Education
 ------
 - **2021.9 ~ Present: Master of Science in Computer Science, [ETH Zurich](https://inf.ethz.ch)**
-    - GPA: 5.89 / 6.0
+    - GPA: 5.90 / 6.0
     - Selected Courses: Computer Graphics (6.0), Shape Modeling and Geometry Processing (6.0), Advanced Systems Lab (6.0), Algorithms Lab (6.0), Probabilistic Artificial Intelligence (6.0)
 - **2016.9 ~ 2020.6: Bachelor of Science in Computer Science and Technology, [Peking University](https://english.pku.edu.cn)**
 
+Master Thesis: [Guided Scatter Decisions for Volume Rendering](https://www.research-collection.ethz.ch/handle/20.500.11850/639514)
+------
+- Modification of the delta tracking algorithm to achieve arbitrary binary volume-surface sample distribution.
+- Derivation of the target distribution utilizing the volume path guiding framework.
+
+
 Academic Project
 ------
-- **2022.6 ~ 2022.9: Evaluation of Transmittance Sampling Techniques in [PBRT V4](https://github.com/mmp/pbrt-v4), [Disney Research Zurich](https://studios.disneyresearch.com)**
-    - [Power-series CMF](https://cs.dartmouth.edu/wjarosz/publications/georgiev19integral.html), [Unbiased Ray Marching](https://research.nvidia.com/publication/2021-06_unbiased-ray-marching-transmittance-estimator), [Debiasing Method](https://cs.dartmouth.edu/~wjarosz/publications/misso22unbiased.html)
-    - Reformatted the [Null-scattering Path Integral Framework](https://cs.dartmouth.edu/wjarosz/publications/miller19null.html) to incorporate transmittance of the shadow ray.
-    - Proposed extension of this framework to express [next-flight estimator](https://jannovak.info/publications/SDTracking/SDTracking.pdf) and support chromatic media.
+- **2022.6 ~ 2022.9: Evaluation of Transmittance Sampling Techniques in [PBRT V4](https://github.com/mmp/pbrt-v4)**
+    - Evaluation of [power-series CMF](https://cs.dartmouth.edu/wjarosz/publications/georgiev19integral.html), [unbiased ray marching](https://research.nvidia.com/publication/2021-06_unbiased-ray-marching-transmittance-estimator) and [debiasing method](https://cs.dartmouth.edu/~wjarosz/publications/misso22unbiased.html) under the [null-scattering path integral](https://cs.dartmouth.edu/wjarosz/publications/miller19null.html) framework.
 
 
 Work Experience
