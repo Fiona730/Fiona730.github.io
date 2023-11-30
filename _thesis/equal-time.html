@@ -1,0 +1,356 @@
+---
+title: "Equal-time Experiments"
+excerpt: ""
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Cornell Box + Cloud, Front Light, 60s",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr"
+					},
+					{
+						"title": "Naive (41 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_naive_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.376",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_naive_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Primary (36 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.3760",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir (20 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.390",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_guideDir_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir + Secondary (12 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.483",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 1
+					},
+					{
+						"title": "GuideDir + All (10 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.489",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/frontlight/cloud-scale1/maj1/cornell-box-volume-disneyScale1Frontlight_naive_reference_133120spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/frontlight/RGB_cornell-box-volume-disneyScale1Frontlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 1
+					},
+				]
+			},
+			{
+				"title": "Back Light, 60s",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr"
+					},
+					{
+						"title": "Naive (42 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_naive_denoise_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.758",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_naive_denoise_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "Primary (36 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.772",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_primaryContrib_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir (35 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.474",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_guideDir_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir + Secondary (20 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.632",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 2
+					},
+					{
+						"title": "GuideDir + All (16 spp)",
+						"image": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.654",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/cornell-box/backlight/cloud-scale3/maj1/cornell-box-volume-disneyScale3Backlight_naive_reference_134784spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/cornell-box/backlight/RGB_cornell-box-volume-disneyScale3Backlight_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time60_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 2
+					},
+				]
+			},
+			{
+				"title": "Landscape, 600s",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr"
+					},
+					{
+						"title": "Naive (39 spp)",
+						"image": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_naive_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.622",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_naive_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "Primary (41 spp)",
+						"image": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.455",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_primaryContrib_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "GuideDir (42 spp)",
+						"image": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_guideDir_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.556",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_guideDir_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "GuideDir + Secondary (34 spp)",
+						"image": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.564",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 3
+					},
+					{
+						"title": "GuideDir + All (36 spp)",
+						"image": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.378",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week26/landscape/landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_52608spp_RGB.exr",
+							"imageB": "/images/thesis/equal-time/landscape/RGB_landscape-hetero-Scale3e-4SigmaS0.9A0.1-size20_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 3
+					},
+				]
+			},
+			{
+				"title": "Living Room, 600s",
+				"children": [
+					{
+						"title": "GT",
+						"image": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr"
+					},
+					{
+						"title": "Naive (424 spp)",
+						"image": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_naive_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.886",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_naive_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Primary (342 spp)",
+						"image": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_primaryContrib_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.889",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_primaryContrib_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "GuideDir (224 spp)",
+						"image": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_guideDir_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.494",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_guideDir_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "GuideDir + Secondary (320 spp)",
+						"image": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.448",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 4
+					},
+					{
+						"title": "GuideDir + All (256 spp)",
+						"image": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "(SMAPE) 0.453",
+						"lossMap": {
+							"function": "SMAPE",
+							"imageA": "/images/thesis/week17/CoronaBenchmark2/CoronaBenchmark2_guideDir_reference_118272spp.exr",
+							"imageB": "/images/thesis/equal-time/livingroom/RGB_CoronaBenchmark2_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+						},
+						"tonemapGroup": 4
+					},
+				]
+			},
+			{
+				"title": "Underwater, 600s",
+				"children": [
+					{
+						"title": "GuideDir (100 spp)",
+						"image": "/images/thesis/equal-time/underwater/RGB_290skydemo-s0.1_guideDir_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "GuideDir + Secondary (81 spp)",
+						"image": "/images/thesis/equal-time/underwater/RGB_290skydemo-s0.1_secondaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+					{
+						"title": "GuideDir + All (93 spp)",
+						"image": "/images/thesis/equal-time/underwater/RGB_290skydemo-s0.1_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_-EqualTime.exr"
+					},
+				]
+			}
+		],
+		
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
