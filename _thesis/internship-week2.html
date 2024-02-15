@@ -1,0 +1,374 @@
+---
+title: "Internship Week 2"
+excerpt: ""
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+		{
+				"title": "Landscape, 256spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryContrib_0.5mis_scaling_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "VSP(1)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_primaryContrib_0.5mis_scaling_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/VolScatterProb_landscape-hetero-cube-merge_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib-based, Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/Var_landscape-hetero-cube-merge_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance-based, Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge/Var_landscape-hetero-cube-merge_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Landscape Double",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_scaling_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/RGB_landscape-hetero-cube-merge-double_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "VSP(2)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_scaling_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + All Contrib",
+						"image": "/images/thesis/internship-week2/landscape-hetero-cube-merge-double/VolScatterProb_landscape-hetero-cube-merge-double_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "CoronaBenchmark2, 256spp",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "VSP(3)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib-based, Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/Var_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr",
+						"tonemapGroup": 1
+					},
+					{
+						"title": "Primary Variance-based, Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin/Var_CoronaBenchmark2-volume-hetero-cube-perlin_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr",
+						"tonemapGroup": 1
+					},
+				]
+			},
+			{
+				"title": "CoronaBenchmark2 Double",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "VSP(4)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Variance",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryVariance_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-double/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-double_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "CoronaBenchmark2 Triple",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-triple_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-triple_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/RGB_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "VSP(5)",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-triple_naive_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Cutoff",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_0.5mis_cutoff_spp256_seed0_.exr"
+					},
+					{
+						"title": "Primary Contrib, Scaling NullCollBias",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-triple_guideDir_spp256_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir + Primary Contrib",
+						"image": "/images/thesis/internship-week2/CoronaBenchmark2-volume-hetero-cube-perlin-triple/VolScatterProb_CoronaBenchmark2-volume-hetero-cube-perlin-triple_primaryContrib_guideDir_0.5mis_scaling_nullCollBias_tr_spp256_seed0_.exr"
+					},
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
