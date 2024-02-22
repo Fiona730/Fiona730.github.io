@@ -1,0 +1,206 @@
+---
+title: "Internship Week 3"
+excerpt: "Equal-time Results on Heterogeneous Volume with High Frequency"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Landscape, 600s",
+				"children": [
+					{
+						"title": "Naive (102 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_naive_time600_seed0_.exr"
+					},
+					{
+						"title": "Guide Dir (106 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_guideDir_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Primary, NullCollNoBias (91 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_primaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Secondary, NoBias (97 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_secondaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, NoBias (85 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_allContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed1_.exr"
+					},
+					{
+						"title": "+ All, Bias (90 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/RGB_landscape-hetero-cube-merge_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Path Length (1)",
+				"children": [
+					{
+						"title": "Naive (102 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/landscape_pathlen_naive.exr"
+					},
+					{
+						"title": "Guide Dir (106 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/landscape_pathlen_guideDir.exr"
+					},
+					{
+						"title": "+ All, NoBias (85 SPP)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/landscape_pathlen_guideDir_all.exr"
+					},
+					{
+						"title": "Volume Grid Resolution = (#vol segments / 100)",
+						"image": "/images/thesis/internship-week3/landscape-hetero-cube-merge/landscape-hetero-cube-merge-grid-resolution.exr",
+						"tonemapGroup": 1
+					},
+				]
+			},
+			{
+				"title": "Underwater",
+				"children": [
+					{
+						"title": "Naive (252 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_naive_time600_seed0_-testUnderwater.exr"
+					},
+					{
+						"title": "Guide Dir (145 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_guideDir_time600_seed0_-testUnderwater.exr"
+					},
+					{
+						"title": "+ Primary, NullCollNoBias (159 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_primaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_-testUnderwater.exr"
+					},
+					{
+						"title": "+ Secondary, NoBias (116 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_secondaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_-testUnderwater.exr"
+					},
+					{
+						"title": "+ All, NoBias (119 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_allContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed2_-testUnderwater.exr"
+					},
+					{
+						"title": "+ All, Bias (167 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed2_-testUnderwater.exr"
+					},
+					{
+						"title": "+ All, C1C2 (190 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/RGB_290skydemo-hetero-cube-perlin-scale0.65_allContrib_guideDir_0.5mis_scaling_nullCollBias_C1C2_time600_seed3_-testUnderwater.exr"
+					}
+				]
+			},
+			{
+				"title": "Path Length (2)",
+				"children": [
+					{
+						"title": "Naive (252 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/underwater_pathlen_naive.exr"
+					},
+					{
+						"title": "Guide Dir (145 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/underwater_pathlen_guideDir.exr"
+					},
+					{
+						"title": "+ All, NoBias (119 SPP)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/underwater_pathlen_guideDir_all.exr"
+					},
+					{
+						"title": "Volume Grid Resolution = (#vol segments / 100)",
+						"image": "/images/thesis/internship-week3/290skydemo-hetero-cube-perlin-scale0.65/290skydemo-hetero-cube-perlin-scale0.65-grid-resolution.exr",
+						"tonemapGroup": 2
+					},
+				]
+			},
+			{
+				"title": "CoronaBenchmark",
+				"children": [
+					{
+						"title": "Naive (159 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_naive_time600_seed0_-scale0.001-EqualTime.exr"
+					},
+					{
+						"title": "Guide Dir (99 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_guideDir_time600_seed0_-scale0.001-EqualTime.exr"
+					},
+					{
+						"title": "+ Primary, NullCollNoBias (62 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_primaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_-scale0.001-EqualTime.exr"
+					},
+					{
+						"title": "+ Secondary, NoBias (44 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_secondaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_-scale0.001-EqualTime.exr"
+					},
+					{
+						"title": "+ All, NoBias (41 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_allContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_-scale0.001-EqualTime.exr"
+					},
+					{
+						"title": "+ All, Bias (72 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, Scaling (95 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/RGB_CoronaBenchmark2-volume-hetero-cube-perlin_allContrib_guideDir_0.5mis_scaling_time600_seed0_-testTrEst-EqualTime.exr"
+					},
+				]
+			},
+			{
+				"title": "Path Length (3)",
+				"children": [
+					{
+						"title": "Naive (159 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/Corona_pathlen_naive.exr",
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Guide Dir (99 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/Corona_pathlen_guideDir.exr",
+						"tonemapGroup": 4
+					},
+					{
+						"title": "+ All, NoBias (41 SPP)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/Corona_pathlen_guideDir_all.exr",
+						"tonemapGroup": 4
+					},
+					{
+						"title": "Volume Grid Resolution = (#vol segments / 100)",
+						"image": "/images/thesis/internship-week3/CoronaBenchmark2-volume-hetero-cube-perlin-dense/CoronaBenchmark2-volume-hetero-cube-perlin-dense-grid-resolution.exr",
+						"tonemapGroup": 3
+					},
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
