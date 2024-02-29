@@ -1,0 +1,100 @@
+---
+title: "Internship Week 4"
+excerpt: "Equal-time Results on Heterogeneous Volume for Underwater Scene (Same Random Seed)"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Underwater (Smooth)",
+				"children": [
+					{
+						"title": "Guide Dir (140 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_guideDir_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Primary, NullCollNoBias (144 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_primaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Secondary, NoBias (126 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_secondaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, NoBias (123 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_allContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, Bias (153 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, C1C2 (168 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-merge-addConst-scale0.15/RGB_290skydemo-hetero-cube-merge-addConst-scale0.15_allContrib_guideDir_0.5mis_scaling_nullCollBias_C1C2_time600_seed0_-halfDensity.exr"
+					}
+				]
+			},
+			{
+				"title": "Underwater (Turbulent)",
+				"children": [
+					{
+						"title": "Guide Dir (192 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_guideDir_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Primary, NullCollNoBias (131 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_primaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ Secondary, NoBias (124 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_secondaryContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, NoBias (124 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_allContrib_guideDir_0.5mis_scaling_nullCollNoBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, Bias (173 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_allContrib_guideDir_0.5mis_scaling_nullCollBias_tr_time600_seed0_.exr"
+					},
+					{
+						"title": "+ All, C1C2 (154 SPP)",
+						"image": "/images/thesis/internship-week4/290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3/RGB_290skydemo-hetero-cube-perlin-double-addConst0.3-scale0.3_allContrib_guideDir_0.5mis_scaling_nullCollBias_C1C2_time600_seed0_.exr"
+					}
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
