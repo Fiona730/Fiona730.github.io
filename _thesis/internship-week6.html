@@ -1,0 +1,105 @@
+---
+title: "Internship Week 6"
+excerpt: "New test scenes"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Light shaft (Homogeneous, 60s)",
+				"children": [
+					{
+						"title": "Naive (140 SPP)",
+						"image": "/images/thesis/internship-week6/lightshaft/RGB_cornell-box-lightshaft-homo-scale0.1-g0-lowReflectance-naive-60time.exr"
+					},
+					{
+						"title": "Equiangular (10 SPP)",
+						"image": "/images/thesis/internship-week6/lightshaft/RGB_cornell-box-lightshaft-homo-scale0.1-g0-lowReflectance-equi-60time.exr"
+					},
+					{
+						"title": "Adjust Once (12 SPP)",
+						"image": "/images/thesis/internship-week6/lightshaft/RGB_cornell-box-lightshaft-homo-scale0.1-g0-lowReflectance-primaryContrib_0.5mis_scaling_adjustOnce_tr-60time.exr"
+					},
+					{
+						"title": "Null Coll (12 SPP), Contribution-based, Primary ray, Biased",
+						"image": "/images/thesis/internship-week6/lightshaft/RGB_cornell-box-lightshaft-homo-scale0.1-g0-lowReflectance-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+				]
+			},
+			{
+				"title": "Earth (Heterogeneous, 60s)",
+				"children": [
+					{
+						"title": "Naive (94 SPP)",
+						"image": "/images/thesis/internship-week6/earth/RGB_earth-radius1.5-left-naive-60time.exr"
+					},
+					{
+						"title": "Equiangular (50 SPP)",
+						"image": "/images/thesis/internship-week6/earth/RGB_earth-radius1.5-left-equi-60time.exr"
+					},
+					{
+						"title": "Adjust Once (68 SPP)",
+						"image": "/images/thesis/internship-week6/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_scaling_adjustOnce_tr-60time.exr"
+					},
+					{
+						"title": "Null Coll (70 SPP)",
+						"image": "/images/thesis/internship-week6/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+				]
+			},
+			{
+				"title": "Budda (Heterogeneous, 180s)",
+				"children": [
+					{
+						"title": "Naive (130 SPP)",
+						"image": "/images/thesis/internship-week6/budda/RGB_buddha_3-mine-naive-180time.exr"
+					},
+					{
+						"title": "Equiangular (101 SPP)",
+						"image": "/images/thesis/internship-week6/budda/RGB_buddha_3-mine-equi-180time.exr"
+					},
+					{
+						"title": "Adjust Once (104 SPP)",
+						"image": "/images/thesis/internship-week6/budda/RGB_buddha_3-mine-primaryContrib_0.5mis_scaling_adjustOnce_tr-180time.exr"
+					},
+					{
+						"title": "Null Coll (98 SPP)",
+						"image": "/images/thesis/internship-week6/budda/RGB_buddha_3-mine-primaryContrib_0.5mis_scaling_nullCollBias_tr-180time.exr"
+					},
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
