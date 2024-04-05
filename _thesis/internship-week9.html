@@ -1,0 +1,154 @@
+---
+title: "Internship Week 6"
+excerpt: "RIS to adjust surface-volume sample ratio"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Front light (60s)",
+				"children": [
+					{
+						"title": "Naive (57 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-naive_denoise-60time.exr"
+					},
+					{
+						"title": "RIS delta tracking (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-ris_denoise-60time.exr"
+					},
+					{
+						"title": "RIS reach target 1 MIS (47 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_1mis_ris-60time.exr"
+					},
+					{
+						"title": "RIS reach target 0.5 MIS (47 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 1 MIS (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_1mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/RGB_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Prob (1)",
+				"children": [
+					{
+						"title": "Naive (57 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-naive_denoise-60time.exr"
+					},
+					{
+						"title": "RIS delta tracking (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-ris_denoise-60time.exr"
+					},
+					{
+						"title": "RIS reach target 1 MIS (47 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_1mis_ris-60time.exr"
+					},
+					{
+						"title": "RIS reach target 0.5 MIS (47 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 1 MIS (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_1mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS (52 SPP)",
+						"image": "/images/thesis/internship-week9/front/VolScatterProb_cornell-box-volume-bunnyScale0.5Frontlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "Reference",
+						"image": "/images/thesis/internship-week9/front/VSP_Reference.exr"
+					}
+				]
+			},
+			{
+				"title": "Back light (60s)",
+				"children": [
+					{
+						"title": "Naive (57 SPP)",
+						"image": "/images/thesis/internship-week9/back/RGB_cornell-box-volume-disneyScale3Backlight-naive_denoise-60time.exr"
+					},
+					{
+						"title": "RIS delta tracking (48 SPP)",
+						"image": "/images/thesis/internship-week9/back/RGB_cornell-box-volume-disneyScale3Backlight-ris_denoise-60time.exr"
+					},
+					{
+						"title": "RIS reach target 0.5 MIS (48 SPP)",
+						"image": "/images/thesis/internship-week9/back/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS Biased (54 SPP)",
+						"image": "/images/thesis/internship-week9/back/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS Unbiased (58 SPP)",
+						"image": "/images/thesis/internship-week9/back/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time.exr"
+					}
+				]
+			},
+			{
+				"title": "Volume Scatter Prob (2)",
+				"children": [
+					{
+						"title": "Naive (57 SPP)",
+						"image": "/images/thesis/internship-week9/back/VolScatterProb_cornell-box-volume-disneyScale3Backlight-naive_denoise-60time.exr"
+					},
+					{
+						"title": "RIS delta tracking (48 SPP)",
+						"image": "/images/thesis/internship-week9/back/VolScatterProb_cornell-box-volume-disneyScale3Backlight-ris_denoise-60time.exr"
+					},
+					{
+						"title": "RIS reach target 0.5 MIS (48 SPP)",
+						"image": "/images/thesis/internship-week9/back/VolScatterProb_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS Biased (54 SPP)",
+						"image": "/images/thesis/internship-week9/back/VolScatterProb_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "Scatter Decision Guiding 0.5 MIS Unbiased (58 SPP)",
+						"image": "/images/thesis/internship-week9/back/VolScatterProb_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time.exr"
+					}
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>

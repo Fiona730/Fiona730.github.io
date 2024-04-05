@@ -1,3 +1,7 @@
 _site/
 .DS_Store
 Gemfile.lock
+
+# remove from online page to save storage
+_thesis/week26.html
+images/thesis/week26/
