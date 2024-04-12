@@ -1,0 +1,138 @@
+---
+title: "Internship Week 10"
+excerpt: "RIS on more scenes, equal SPP"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Earth",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week10/earth/RGB_earth-radius1.5-left_naive_denoise_spp64_seed0_.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS",
+						"image": "/images/thesis/internship-week10/earth/RGB_earth-radius1.5-left_primaryContrib_0.5mis_ris_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Unbiased",
+						"image": "/images/thesis/internship-week10/earth/RGB_earth-radius1.5-left_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Biased",
+						"image": "/images/thesis/internship-week10/earth/RGB_earth-radius1.5-left_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Light Shaft",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week10/cornell-box-lightshaft/RGB_cornell-box-lightshaft-hetero-scale0.3-g0_naive_denoise_spp64_seed0_.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS",
+						"image": "/images/thesis/internship-week10/cornell-box-lightshaft/RGB_cornell-box-lightshaft-hetero-scale0.3-g0_primaryContrib_0.5mis_ris_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Unbiased",
+						"image": "/images/thesis/internship-week10/cornell-box-lightshaft/RGB_cornell-box-lightshaft-hetero-scale0.3-g0_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Biased",
+						"image": "/images/thesis/internship-week10/cornell-box-lightshaft/RGB_cornell-box-lightshaft-hetero-scale0.3-g0_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+				]
+			},
+			{
+				"title": "Glass",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week10/glass/RGB_glass_3_naive_denoise_spp64_seed0_.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS",
+						"image": "/images/thesis/internship-week10/glass/RGB_glass_3_primaryContrib_0.5mis_ris_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Unbiased",
+						"image": "/images/thesis/internship-week10/glass/RGB_glass_3_primaryContrib_0.5mis_scaling_nullCollBias_C1C2_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Biased",
+						"image": "/images/thesis/internship-week10/glass/RGB_glass_3_primaryContrib_0.5mis_scaling_nullCollBias_tr_spp64_seed0_.exr"
+					},
+					{
+						"title": "NullColl Biased with ratio tracking Tr for integrand",
+						"image": "/images/thesis/internship-week10/glass/RGB_glass_3-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp-accTrDenom.exr"
+					},
+				]
+			},
+			{
+				"title": "Cornell Box",
+				"children": [
+					{
+						"title": "Naive",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-naive-64spp.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (maj x 1)",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-64spp-1maj.exr"
+					},
+					{
+						"title": "(maj x 5)",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-64spp-5maj.exr"
+					},
+					{
+						"title": "NullColl Biased",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp.exr"
+					},
+					{
+						"title": "NullColl Biased with ratio tracking Tr for integrand (maj x 1)",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp-accTrDenom-1maj.exr"
+					},
+					{
+						"title": "(maj x 5)(2)",
+						"image": "/images/thesis/internship-week10/cornell-box-backLight/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-64spp-accTrDenom-5maj.exr"
+					},
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
