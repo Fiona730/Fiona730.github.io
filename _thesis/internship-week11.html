@@ -1,0 +1,146 @@
+---
+title: "Internship Week 11"
+excerpt: "RIS on more scenes, equal Time"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Earth",
+				"children": [
+					{
+						"title": "Naive (Maj x 1), 117 SPP, 1.75",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-naive_denoise-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 106 SPP, 5.24",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-naive_denoise-60time-3maj.exr"
+					},
+					{
+						"title": "NullColl Unbiased (Maj x 1), 113 SPP, 1.80",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 101 SPP, 4.94",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (Maj x 1), 116 SPP, 2.35",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 105 SPP, 5.84",
+						"image": "/images/thesis/internship-week11/earth/RGB_earth-radius1.5-left-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time-3maj.exr"
+					},
+				]
+			},
+			{
+				"title": "Glass",
+				"children": [
+					{
+						"title": "Naive, 51 SPP, 2.26",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-naive_denoise-60time.exr"
+					},
+					{
+						"title": "NullColl Unbiased, 52 SPP, 2.03",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-60time.exr"
+					},
+					{
+						"title": "NullColl Biased (Maj x 1), 49 SPP, 2.01, 7.0",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 44 SPP, 5.07, 8.7",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time-3maj.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (Maj x 1), 45 SPP, 8.06",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 40 SPP, 19.51",
+						"image": "/images/thesis/internship-week11/glass/RGB_glass_3-primaryContrib_0.5mis_ris-60time-3maj.exr"
+					},
+				]
+			},
+			{
+				"title": "Cornell Box",
+				"children": [
+					{
+						"title": "Naive, 63 SPP, 2.15",
+						"image": "/images/thesis/internship-week11/cornell-box/RGB_cornell-box-volume-disneyScale3Backlight-naive_denoise-60time.exr"
+					},
+					{
+						"title": "NullColl Biased, 60 SPP, 1.87, 9.73",
+						"image": "/images/thesis/internship-week11/cornell-box/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_scaling_nullCollBias_tr-60time.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (Maj x 1), 56 SPP, 3.46",
+						"image": "/images/thesis/internship-week11/cornell-box/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-60time.exr"
+					},
+					{
+						"title": "(Maj x 3), 54 SPP, 10.1",
+						"image": "/images/thesis/internship-week11/cornell-box/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-60time-3maj.exr"
+					},
+					{
+						"title": "(Maj x 7), 50 SPP, 23.6",
+						"image": "/images/thesis/internship-week11/cornell-box/RGB_cornell-box-volume-disneyScale3Backlight-primaryContrib_0.5mis_ris-60time-7maj.exr"
+					},
+				]
+			},
+			{
+				"title": "Landscape (Equal SPP, 64)",
+				"children": [
+					{
+						"title": "Naive, 403s, 0.25",
+						"image": "/images/thesis/internship-week11/landscape-equalSPP/RGB_landscape-hetero-cube-merge-naive_denoise-64spp.exr"
+					},
+					{
+						"title": "NullColl Unbiased, 400s, 0.47",
+						"image": "/images/thesis/internship-week11/landscape-equalSPP/RGB_landscape-hetero-cube-merge-primaryContrib_0.5mis_scaling_nullCollBias_C1C2-64spp.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (Maj x 1), 407s, 1.69",
+						"image": "/images/thesis/internship-week11/landscape-equalSPP/RGB_landscape-hetero-cube-merge-primaryContrib_0.5mis_ris-64spp.exr"
+					},
+					{
+						"title": "RIS 0.5 MIS (Maj x 3), 408s, 1.98",
+						"image": "/images/thesis/internship-week11/landscape-equalSPP/RGB_landscape-hetero-cube-merge-primaryContrib_0.5mis_ris-64spp-3maj.exr"
+					},
+				]
+			},
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
