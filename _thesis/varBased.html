@@ -1,0 +1,240 @@
+---
+title: "Variance-based"
+excerpt: "Contribution and variance-based result for Jungle and Kitchen, 0.75 MIS"
+collection: thesis
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Example: Viewer</title>
+  <style>
+    .stretch {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left:0; right: 0; top:0; bottom: 0;
+    }
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="stretch"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+  <script src="/assets/js/jeri.js"></script>
+  <script>
+    const data = {
+		"title": "root",
+		"children": [
+			{
+				"title": "Jungle, Contribution",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/jungle/RGB_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProbTarget_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProb_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/jungle/VolContrib_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/jungle/SurfContrib_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/jungle/VolSecMom_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/jungle/SurfSecMom_JungleRuins-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Jungle, Variance",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/jungle/RGB_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProbTarget_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProb_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/jungle/VolContrib_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/jungle/SurfContrib_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/jungle/VolSecMom_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/jungle/SurfSecMom_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Jungle, Variance, Wrong",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/jungle/RGB_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProbTarget_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/jungle/VolScatterProb_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/jungle/VolContrib_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/jungle/SurfContrib_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/jungle/VolSecMom_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/jungle/SurfSecMom_JungleRuins-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Kitchen, Contribution",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/kitchen/RGB_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProbTarget_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProb_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/kitchen/VolContrib_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/kitchen/SurfContrib_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/kitchen/VolSecMom_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/kitchen/SurfSecMom_country-kitchen-volume-hetero-primaryContrib_guideDir_0.75mis_resample-16spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Kitchen, Variance",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/kitchen/RGB_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProbTarget_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProb_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/kitchen/VolContrib_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/kitchen/SurfContrib_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/kitchen/VolSecMom_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/kitchen/SurfSecMom_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample-16spp.exr"
+					}
+				]
+			},
+			{
+				"title": "Kitchen, Variance, Wrong",
+				"children": [
+					{
+						"title": "RGB",
+						"image": "/images/thesis/varianceBased/kitchen/RGB_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Target VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProbTarget_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Actual VSP",
+						"image": "/images/thesis/varianceBased/kitchen/VolScatterProb_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Volume contribution",
+						"image": "/images/thesis/varianceBased/kitchen/VolContrib_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Surface contribution",
+						"image": "/images/thesis/varianceBased/kitchen/SurfContrib_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Volume second moment",
+						"image": "/images/thesis/varianceBased/kitchen/VolSecMom_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					},
+					{
+						"title": "Surface second moment",
+						"image": "/images/thesis/varianceBased/kitchen/SurfSecMom_country-kitchen-volume-hetero-primaryVariance_guideDir_0.75mis_resample_wrong-16spp.exr"
+					}
+				]
+			}
+		],
+	};
+
+    Jeri.renderViewer(document.getElementById('root'), data);
+  </script>
+</body>
+</html>
